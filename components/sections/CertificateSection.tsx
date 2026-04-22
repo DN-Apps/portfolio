@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import Image from "next/image";
 import { useTranslations } from "next-intl";
 import { pickCmsData } from "@/utils/pickCmsData";
 import type { CertificateContent } from "@/lib/directus";
@@ -106,11 +107,16 @@ export default function CertificateSection({
         <div className="certificate-grid">
           {displayCertificates.map((certificate) => (
             <article key={certificate.id} className="certificate-card">
-              <img
-                src={certificate.file}
-                alt={certificate.title}
-                className="certificate-image"
-              />
+              <div className="certificate-image-wrapper">
+                <Image
+                  src={certificate.file}
+                  alt={certificate.title}
+                  fill
+                  sizes="(max-width: 600px) 100vw, (max-width: 991px) 50vw, 25vw"
+                  className="certificate-image"
+                  style={{ objectFit: "cover" }}
+                />
+              </div>
               <div className="certificate-card-top">
                 <div>
                   <span className="certificate-tag">{certificate.year}</span>
@@ -145,12 +151,16 @@ export default function CertificateSection({
               </div>
             </div>
             <div className="certificate-modal-body">
-              <img
-                src={selected.file}
-                alt={selected.title}
-                style={{ transform: `scale(${zoom})` }}
-                className="certificate-preview"
-              />
+              <div className="certificate-preview-wrapper">
+                <Image
+                  src={selected.file}
+                  alt={selected.title}
+                  fill
+                  sizes="min(calc(100vw - 2rem), 920px)"
+                  className="certificate-preview"
+                  style={{ transform: `scale(${zoom})`, objectFit: "contain" }}
+                />
+              </div>
             </div>
             <div className="certificate-modal-actions">
               <button

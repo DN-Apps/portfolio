@@ -46,6 +46,7 @@ export default function HeroSection({ content }: HeroSectionProps) {
             width={300}
             height={400}
             priority
+            sizes="(max-width: 375px) 115px, 140px"
             className="portrait-image"
           />
         </div>
