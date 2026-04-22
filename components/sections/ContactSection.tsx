@@ -229,7 +229,7 @@ export default function ContactSection({ content }: ContactSectionProps) {
           </div>
 
           {hasCaptcha ? (
-            <div className="contact-field contact-field-full">
+            <div className="contact-field contact-field-full contact-field-captcha">
               <div ref={turnstileContainerRef}></div>
             </div>
           ) : null}

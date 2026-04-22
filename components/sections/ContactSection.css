@@ -208,10 +208,27 @@
     box-sizing: border-box;
   }
 
-  .contact-field-full > div {
+  .contact-field-captcha {
+    max-width: 100%;
+  }
+
+  .contact-field-captcha > div {
     width: 100%;
     display: flex;
     justify-content: center;
+    overflow: hidden;
+  }
+
+  .contact-submit,
+  .contact-privacy-note,
+  .contact-feedback {
+    width: 100%;
+    max-width: 80%;
+    justify-self: center;
+  }
+
+  .contact-submit {
+    justify-self: center;
   }
 }
 
