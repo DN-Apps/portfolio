@@ -188,6 +188,9 @@
   }
 
   .contact-form {
+    width: clamp(300px, 80%, 900px);
+    max-width: 900px;
+    margin: 0 auto;
     padding: var(--spacing-md);
     gap: var(--spacing-sm);
     border-radius: 10px;
@@ -195,8 +198,8 @@
 
   .contact-field {
     width: 100%;
-    max-width: 80%;
-    justify-self: center;
+    max-width: 100%;
+    justify-self: stretch;
     margin: 0;
   }
 
@@ -223,12 +226,12 @@
   .contact-privacy-note,
   .contact-feedback {
     width: 100%;
-    max-width: 80%;
-    justify-self: center;
+    max-width: 100%;
+    justify-self: stretch;
   }
 
   .contact-submit {
-    justify-self: center;
+    justify-self: stretch;
   }
 }
 
@@ -238,6 +241,8 @@
   }
 
   .contact-form {
+    width: 100%;
+    max-width: 900px;
     grid-template-columns: repeat(2, minmax(0, 1fr));
     gap: var(--spacing-sm);
     padding: var(--spacing-md);
