@@ -43,6 +43,14 @@ jobs:
           context: .
           push: true
           tags: ${{ steps.meta.outputs.tags }}
+          build-args: |
+            NEXT_PUBLIC_APP_NAME=${{ secrets.NEXT_PUBLIC_APP_NAME }}
+            NEXT_PUBLIC_APP_URL=${{ secrets.NEXT_PUBLIC_APP_URL }}
+            NEXT_PUBLIC_DIRECTUS_URL=${{ secrets.NEXT_PUBLIC_DIRECTUS_URL }}
+            NEXT_PUBLIC_CONTACT_EMAIL=${{ secrets.NEXT_PUBLIC_CONTACT_EMAIL }}
+            NEXT_PUBLIC_TURNSTILE_SITE_KEY=${{ secrets.NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+            NEXT_PUBLIC_GITHUB_URL=${{ secrets.NEXT_PUBLIC_GITHUB_URL }}
+            NEXT_PUBLIC_LINKEDIN_URL=${{ secrets.NEXT_PUBLIC_LINKEDIN_URL }}
 
   deploy:
     runs-on: ubuntu-latest
@@ -57,7 +65,7 @@ jobs:
           username: ${{ secrets.STAGING_USER }}
           key: ${{ secrets.STAGING_SSH_KEY }}
           script: |
-            echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u ${{ github.actor }} --password-stdin
             cd /opt/projects/${{ github.event.repository.name }}
+            echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u DN-Apps --password-stdin
             docker compose pull
-            docker compose up -d --remove-orphans
+            docker compose up -d --remove-orphans && echo "Deploy erfolgreich" || (echo "Deploy fehlgeschlagen – alter Container läuft weiter" && exit 1)
