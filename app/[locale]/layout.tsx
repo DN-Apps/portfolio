@@ -12,7 +12,7 @@ export function generateStaticParams() {
 }
 
 export const metadata: Metadata = {
-  title: "Daniel - Full Stack Developer Portfolio",
+  title: "Daniel Nedic | Full Stack Developer",
   description:
     "A multilingual portfolio showcasing projects, skills, and professional journey",
   keywords: [
@@ -24,9 +24,13 @@ export const metadata: Metadata = {
     "next.js",
   ],
   openGraph: {
-    title: "Daniel - Full Stack Developer Portfolio",
+    title: "Daniel Nedic | Full Stack Developer",
     description: "Discover my projects, skills, and professional expertise",
     type: "website",
+  },
+  icons: {
+    icon: [{ url: "/favicon.ico" }, { url: "/icon.png", type: "image/png" }],
+    apple: [{ url: "/apple-icon.png", type: "image/png" }],
   },
 };
 
