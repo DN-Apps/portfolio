@@ -219,9 +219,10 @@ export default function ContactSection({ content }: ContactSectionProps) {
           </label>
 
           <div className="contact-honeypot" aria-hidden="true">
-            <label>
+            <label htmlFor="hp-website" aria-hidden="true">
               Leave this field empty
               <input
+                id="hp-website"
                 type="text"
                 name="website"
                 tabIndex={-1}
