@@ -41,10 +41,10 @@ export default function HeroSection({ content }: HeroSectionProps) {
       <div className="hero-container">
         <div className="hero-image">
           <Image
-            src={content?.portrait ?? "/portrait.jpg"}
+            src={content?.portrait ?? "/portrait.webp"}
             alt={heroData.name}
-            width={300}
-            height={400}
+            width={400}
+            height={512}
             priority
             sizes="(max-width: 375px) 115px, 140px"
             className="portrait-image"
