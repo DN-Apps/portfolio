@@ -30,6 +30,7 @@ export default function ContactSection({ content }: ContactSectionProps) {
     function renderWidget() {
       const w = window as any;
       if (!w.turnstile || !turnstileContainerRef.current) return;
+      const isMobile = window.matchMedia("(max-width: 480px)").matches;
 
       // Remove previous widget if any
       if (turnstileWidgetIdRef.current !== undefined) {
@@ -44,6 +45,7 @@ export default function ContactSection({ content }: ContactSectionProps) {
         {
           sitekey: turnstileSiteKey,
           theme: "light",
+          size: isMobile ? "compact" : "normal",
           callback: (token: string) => setTurnstileToken(token),
           "expired-callback": () => setTurnstileToken(""),
           "error-callback": () => setTurnstileToken(""),
