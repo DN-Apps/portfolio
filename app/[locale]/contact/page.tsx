@@ -22,7 +22,7 @@ export default async function ContactPage({ params: { locale } }: PageProps) {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <ContactSection content={contactContent} />
       </main>
       <Footer />

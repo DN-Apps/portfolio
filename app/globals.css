@@ -165,6 +165,15 @@ button:hover {
   box-shadow: 0 10px 20px rgba(0, 212, 255, 0.3);
 }
 
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
+}
+
 /* Scrollbar */
 ::-webkit-scrollbar {
   width: 10px;

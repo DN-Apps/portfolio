@@ -16,7 +16,7 @@ export default async function ImprintPage({ params: { locale } }: PageProps) {
   return (
     <>
       <Header />
-      <main className="legal-page">
+      <main id="main-content" className="legal-page">
         <div className="legal-container">
           <header className="legal-header">
             <h1>{t("title")}</h1>

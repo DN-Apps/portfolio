@@ -55,6 +55,11 @@
   color: var(--color-primary);
 }
 
+.lang-btn:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 2px;
+}
+
 .lang-btn.active {
   background: linear-gradient(
     135deg,

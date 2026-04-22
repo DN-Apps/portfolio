@@ -22,7 +22,7 @@ export default async function PersonalPage({ params: { locale } }: PageProps) {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <PersonalSection cards={cards} />
       </main>
       <Footer />

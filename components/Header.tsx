@@ -21,11 +21,39 @@ const navItems = [
 const normalizePath = (path: string) =>
   path.endsWith("/") && path.length > 1 ? path.slice(0, -1) : path;
 
+const a11yText = {
+  de: {
+    skipToContent: "Zum Inhalt springen",
+    openMenu: "Menü öffnen",
+    closeMenu: "Menü schließen",
+    mainNavigation: "Hauptnavigation",
+  },
+  en: {
+    skipToContent: "Skip to main content",
+    openMenu: "Open menu",
+    closeMenu: "Close menu",
+    mainNavigation: "Main navigation",
+  },
+  fr: {
+    skipToContent: "Aller au contenu principal",
+    openMenu: "Ouvrir le menu",
+    closeMenu: "Fermer le menu",
+    mainNavigation: "Navigation principale",
+  },
+  sr: {
+    skipToContent: "Preskoci na glavni sadrzaj",
+    openMenu: "Otvori meni",
+    closeMenu: "Zatvori meni",
+    mainNavigation: "Glavna navigacija",
+  },
+} as const;
+
 export default function Header() {
   const locale = useLocale();
   const pathname = usePathname();
   const t = useTranslations("common.nav");
   const [menuOpen, setMenuOpen] = useState(false);
+  const labels = a11yText[locale as keyof typeof a11yText] ?? a11yText.en;
 
   // Trailing-Slashes werden vereinheitlicht, damit die Aktiv-Markierung auch
   // dann stimmt, wenn Next unterschiedliche URL-Formen liefert.
@@ -33,14 +61,19 @@ export default function Header() {
 
   return (
     <header className="header">
+      <a className="skip-link" href="#main-content">
+        {labels.skipToContent}
+      </a>
       <div className="header-container">
         <div className="logo">
           <h1>Ned-IT</h1>
           <button
+            type="button"
             className={`burger ${menuOpen ? "open" : ""}`}
             onClick={() => setMenuOpen((open) => !open)}
-            aria-label={menuOpen ? "Schließen" : "Menü öffnen"}
+            aria-label={menuOpen ? labels.closeMenu : labels.openMenu}
             aria-expanded={menuOpen}
+            aria-controls="primary-navigation"
           >
             <span />
             <span />
@@ -48,7 +81,11 @@ export default function Header() {
           </button>
         </div>
 
-        <nav className={`nav ${menuOpen ? "open" : ""}`}>
+        <nav
+          id="primary-navigation"
+          className={`nav ${menuOpen ? "open" : ""}`}
+          aria-label={labels.mainNavigation}
+        >
           {navItems.map((item) => {
             const href = `/${item.path}`;
             const isActive = currentPath === normalizePath(href);

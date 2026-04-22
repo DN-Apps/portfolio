@@ -10,6 +10,23 @@
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
 }
 
+.skip-link {
+  position: absolute;
+  left: 0.75rem;
+  top: -200px;
+  z-index: 2000;
+  padding: 0.55rem 0.75rem;
+  border-radius: 8px;
+  background: #ffffff;
+  color: var(--color-primary);
+  border: 2px solid var(--color-primary);
+  font-weight: 700;
+}
+
+.skip-link:focus-visible {
+  top: 0.55rem;
+}
+
 /* Mobile first: Logo, Burger, Navigation und Sprachumschalter stehen zunächst
   untereinander, weil das auf kleinen Breiten stabiler ist. */
 .header-container {
@@ -46,7 +63,12 @@
   height: 1.25rem;
   padding: 0;
   cursor: pointer;
-  outline: none;
+}
+
+.burger:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 4px;
+  border-radius: 6px;
 }
 
 .burger span {
@@ -100,6 +122,11 @@
   color: var(--color-primary);
   border-color: var(--color-primary);
   background: rgba(33, 100, 119, 0.1);
+}
+
+.nav-link:focus-visible {
+  outline: 3px solid var(--color-primary);
+  outline-offset: 3px;
 }
 
 .nav-link.active {

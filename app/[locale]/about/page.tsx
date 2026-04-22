@@ -34,7 +34,7 @@ export default async function AboutPage({ params: { locale } }: PageProps) {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <HeroSection content={heroContent} />
         <AboutSection cards={aboutCards} />
         <CertificateSection certificates={certificates} />

@@ -49,19 +49,28 @@ export default function LanguageSwitcher({
   };
 
   return (
-    <div className="language-switcher" aria-label="Sprache wählen">
+    <div
+      className="language-switcher"
+      role="group"
+      aria-label="Language selector"
+    >
       {locales.map((locale) => {
         const meta = localeMeta[locale];
+        const isCurrent = currentLocale === locale;
 
         return (
           // CSS blendet je nach Breakpoint Kurz- oder Langform ein. Das JSX
           // enthält daher beide Varianten, damit das Layout flexibel bleibt.
           <button
+            type="button"
             key={locale}
             onClick={() => handleLanguageChange(locale)}
-            className={`lang-btn ${currentLocale === locale ? "active" : ""}`}
+            className={`lang-btn ${isCurrent ? "active" : ""}`}
             title={meta.name}
-            aria-label={meta.name}
+            aria-label={
+              isCurrent ? `${meta.name}, currently selected` : meta.name
+            }
+            aria-pressed={isCurrent}
           >
             <img
               className="lang-flag-icon"

@@ -22,7 +22,7 @@ export default async function CareerPage({ params: { locale } }: PageProps) {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <CareerSection experiences={experiences} />
       </main>
       <Footer />

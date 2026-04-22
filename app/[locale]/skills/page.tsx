@@ -26,7 +26,7 @@ export default async function SkillsPage({ params: { locale } }: PageProps) {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <SkillsSection groups={groups} />
         <SoftSkillsSection groups={softSkillGroups} />
       </main>

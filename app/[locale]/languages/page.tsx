@@ -18,7 +18,7 @@ export default async function LanguagesPage({ params: { locale } }: PageProps) {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <LanguagesSection items={items} />
       </main>
       <Footer />

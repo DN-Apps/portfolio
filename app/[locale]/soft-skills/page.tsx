@@ -24,7 +24,7 @@ export default async function SoftSkillsPage({
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <SoftSkillsSection groups={groups} />
       </main>
       <Footer />

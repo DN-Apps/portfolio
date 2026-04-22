@@ -22,7 +22,7 @@ export default async function ProjectsPage({ params: { locale } }: PageProps) {
   return (
     <>
       <Header />
-      <main>
+      <main id="main-content">
         <ProjectsSection projects={projects} />
       </main>
       <Footer />
