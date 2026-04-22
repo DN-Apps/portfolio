@@ -193,11 +193,16 @@
     border-radius: 10px;
   }
 
+  .contact-field {
+    width: 80%;
+    margin: 0 auto;
+  }
+
   .contact-field input,
   .contact-field textarea {
-    width: 80%;
+    width: 100%;
     max-width: 100%;
-    margin: 0 auto;
+    margin: 0;
     box-sizing: border-box;
   }
 }
