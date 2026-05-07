@@ -1,0 +1,306 @@
+{
+  "common": {
+    "name": "Daniel",
+    "title": "Full Stack Developer",
+    "description": "Passionate about building beautiful and functional applications",
+    "nav": {
+      "about": "Über mich",
+      "projects": "Projekte",
+      "personal": "Privat",
+      "career": "Werdegang",
+      "skills": "Skills",
+      "languages": "Sprachen",
+      "contact": "Kontakt"
+    },
+    "footer": {
+      "links_title": "Links",
+      "contact_title": "Kontakt",
+      "legal_title": "Rechtliches"
+    },
+    "legal": {
+      "imprint": "Impressum",
+      "privacy": "Datenschutz"
+    }
+  },
+  "hero": {
+    "greeting": "Hi! Mein Name:",
+    "name": "Daniel Nedic",
+    "passion": "Meine Leidenschaft: Softwareentwicklung",
+    "title": "Fullstack Developer mit Erfahrung in:",
+    "tech_skills": "React | Node.js | SQL | Docker | Git | Server-Deployments | Mendix | Outsystems | Agile Projektteams (Lidl) | Softwareprojekte (Lidl)",
+    "brings": "Was ich mitbringe:",
+    "brings_list": "4+ Jahre Softwareentwicklung in Unternehmensumgebungen | Selbstständig entwickelte Webapplikationen (React/Node/MySQL) | Verständnis für sauberen Code, Architektur und Benutzerfokus | Teamfähigkeit, klare Kommunikation, zuverlässige Arbeitsweise",
+    "focus": "Aktueller Fokus:",
+    "focus_list": "Vertiefung im modernen Web-Stack & Fullstack Engineering | Aufbau und Hosting eigener Projekte zur praktischen Anwendung",
+    "languages_intro": "Sprachen: Deutsch, Englisch (B2), Serbisch, Französisch (Grundkenntnisse)",
+    "closing": "Offen für neue Möglichkeiten im Bereich Webentwicklung / Application Engineering."
+  },
+  "contact": {
+    "title": "Kontaktformular",
+    "description": "Schreibe mir gerne eine Nachricht. Ich melde mich so schnell wie möglich zurück.",
+    "name_label": "Name",
+    "name_placeholder": "Dein Name",
+    "email_label": "E-Mail",
+    "email_placeholder": "deine@email.de",
+    "subject_label": "Betreff",
+    "subject_placeholder": "Worum geht es?",
+    "message_label": "Nachricht",
+    "message_placeholder": "Deine Nachricht...",
+    "submit": "Nachricht senden",
+    "submitting": "Wird gesendet...",
+    "success": "Danke, deine Nachricht wurde gesendet.",
+    "error_required": "Bitte fülle Name, E-Mail und Nachricht aus.",
+    "error_generic": "Senden fehlgeschlagen. Bitte versuche es erneut.",
+    "error_captcha": "Bitte bestätige, dass du kein Bot bist.",
+    "privacy_notice": "Mit dem Absenden stimmst du der Verarbeitung deiner Angaben zur Bearbeitung deiner Anfrage zu.",
+    "privacy_notice_link": "Zum Datenschutzhinweis"
+  },
+  "about": {
+    "title": "Über mich",
+    "intro": "Willkommen auf meiner Portfolio-Seite!",
+    "experience": "Mit mehreren Jahren Erfahrung in Full Stack Development bringe ich umfassende Kenntnisse in modernen Web-Technologien mit.",
+    "current_focus": "Mein aktueller Fokus liegt auf der Entwicklung skalierbarer Anwendungen mit Next.js und TypeScript sowie DevOps-Optimierung.",
+    "strengths": "Ich zeichne mich durch saubere Code-Architektur, agile Zusammenarbeit und kontinuierliches Lernen aus."
+  },
+  "projects": {
+    "title": "Meine Projekte",
+    "completed": "Abgeschlossen",
+    "in_development": "In Entwicklung",
+    "planned": "Geplant",
+    "target_group_label": "Zielgruppe",
+    "functionalities_label": "Funktionalitäten",
+    "project_1": {
+      "title": "Monteurzimmer Nedic",
+      "description": "Ein Projekt zur Bereitstellung von Monteurunterkünften mit moderner Ausstattung und einfacher Buchungsoption.",
+      "target_group": "Baufirmen & Mitarbeiter, Studenten",
+      "functionalities": "Buchungsformular | Mediathek | unkomplizierte Kontaktaufnahme"
+    },
+    "project_2": {
+      "title": "Digitale Visitenkarte",
+      "description": "Die digitale Visitenkarte fuer modernes Netzwerken - schnell, stilvoll und smart.",
+      "target_group": "An Digitalisierung Interessierte",
+      "functionalities": "Kontaktdateneingabe | Firmenauswahl | Visualisierung im Browser | Scan to phone"
+    },
+    "project_3": {
+      "title": "Content Management System",
+      "description": "Headless CMS mit TypeScript, GraphQL API und React Admin Panel"
+    },
+    "project_4": {
+      "title": "App-Manager",
+      "description": "Ein Applikationsportal, das zentralisiert ueber einen Applikationspool wacht, in dem man Werte hinzufuegen, lesen, aktualisieren und loeschen kann.",
+      "target_group": "Eigener Application-Pool",
+      "functionalities": "CRUD- und Reportingfunktionen"
+    },
+    "project_5": {
+      "title": "PWA, Native, KI...",
+      "description": "Mein Ziel ist es, mich intensiv mit zukunftsweisenden Technologien auseinanderzusetzen, um innovative digitale Loesungen zu entwickeln.",
+      "target_group": "Kuenftige Interessenten und Kunden",
+      "functionalities": "Offlinefaehigkeiten | GPT-Integrationen | Systemkomponenten integrieren | Datenanalysen | etc."
+    }
+  },
+  "personal": {
+    "title": "Privates über mich",
+    "intro": "Abseits der Programmierung",
+    "hobbies": "In meiner Freizeit interessiere ich mich für Technologie, Reisen und Fitness. Ich liebe es, neue Kulturen kennenzulernen und mich persönlich weiterzuentwickeln.",
+    "location": "Ich lebe derzeit in Deutschland und bin offen für Remote-Zusammenarbeit weltweit.",
+    "sport_title": "Sport",
+    "sport_text": "Ich betreibe regelmäßig Kraft- und Ausdauersport und genieße ausgiebige Spaziergänge.",
+    "sport_goals_label": "Ziele",
+    "sport_goals": "Meinen Fortschritt zu dokumentieren und mich verbessern zu können, wo ich mich verbessern kann.",
+    "sport_why_label": "Warum",
+    "sport_why": "Ich schätze meine geistige und körperliche Gesundheit.",
+    "sport_favorites_label": "Meine Favoriten",
+    "sport_favorites": "Weinbergläufe | hochvoluminöse Kraftsporteinheit | Kleinfeld-Fußball | etc.",
+    "woodwork_title": "Waldarbeiten",
+    "woodwork_text": "Aufgewachsen mit Wochenenden, an denen alle gemeinsam im staedtischen Wald Holz aufbereiten, um ueber den Winter heizen zu koennen, erfuellt mich mit Stolz.",
+    "woodwork_goal_label": "Ziel",
+    "woodwork_goal": "Gemeinsam ging es immer schneller und bereitete zusaetzlich mehr Spass an der Arbeit.",
+    "woodwork_useful_label": "Nuetzliches",
+    "woodwork_useful": "Ich habe viel ueber Arbeit und Lohn lernen koennen. Holzarbeit waermt zusaetzlich mindestens zwei Mal: Beim Arbeiten und beim Heizen.",
+    "woodwork_tools_label": "Tools",
+    "woodwork_tools": "Eigene Kettensaege mit noetigem Equipment | Saegekettenschein | etc.",
+    "diy_title": "Heimwerken",
+    "diy_text": "Ich repariere gerne Dinge im Haushalt und liebe es, handwerklich aktiv zu sein.",
+    "diy_goal_label": "Ziel",
+    "diy_goal": "Dinge gehen kaputt, das passiert. Weg von der Wegwerfgesellschaft, hin zu Recycling und Upcycling.",
+    "diy_useful_label": "Nuetzliches",
+    "diy_useful": "Nachhaltigkeit und technisches Verstaendnis fuer ein breites Feld an Dingen interessieren mich seit Kindheitstagen.",
+    "diy_resources_label": "Hilfsmittel",
+    "diy_resources": "KI-Unterstuetzung | Schriftliche Anleitungen | YouTube-Anleitungen | Profis konsultieren bei heiklen Faellen",
+    "action_title": "Action & Abenteuer",
+    "action_text": "Ich liebe Abenteuer wie Fallschirmspringen oder Klippenspringen - Adrenalin ist mein Freund!",
+    "action_goals_label": "Ziele",
+    "action_goals": "Raus aus der eigenen Komfortzone.",
+    "action_reflection_label": "Lerneffekt",
+    "action_reflection": "Damit lerne ich meine Grenzen immer wieder neu kennen. Das treibt meine Faehigkeiten zu reflektieren an und bringt mich dazu, mir immer wieder neue Ziele zu setzen.",
+    "action_drivers_label": "Antrieb",
+    "action_drivers": "Grundathletik | Neugier am Ungewissen | Neue Dinge ausprobieren"
+  },
+  "career": {
+    "title": "Beruflicher Werdegang",
+    "experience_0": {
+      "company": "Valmet Automotive Holding GmbH & Co. KG, Bad Friedrichshall, DE",
+      "position": "Ausbildung Informatikkaufmann",
+      "start_date": "2015",
+      "end_date": "2018",
+      "description": "Ausbildung im Bereich Informatik und kaufmännische Prozesse.",
+      "current": false
+    },
+    "experience_1": {
+      "company": "Tech Startup",
+      "position": "Senior Full Stack Developer",
+      "start_date": "2022",
+      "end_date": "Heute",
+      "description": "Leitung von Full Stack Projekten, Architektur-Entscheidungen und Team-Mentoring",
+      "current": true
+    },
+    "experience_2": {
+      "company": "Digital Agency",
+      "position": "Full Stack Developer",
+      "start_date": "2020",
+      "end_date": "2022",
+      "description": "Entwicklung von Web-Anwendungen mit React und Node.js für verschiedene Kunden",
+      "current": false
+    },
+    "experience_3": {
+      "company": "Web Development Company",
+      "position": "Junior Developer",
+      "start_date": "2019",
+      "end_date": "2020",
+      "description": "Erste Schritte als Webentwickler mit JavaScript und Vue.js",
+      "current": false
+    },
+    "experience_4": {
+      "company": "Valmet Automotive Holding GmbH & Co. KG, Bad Friedrichshall, DE",
+      "position": "IT-Systemadministrator",
+      "start_date": "2018",
+      "end_date": "2019",
+      "description": "IT-Systemadministration fuer ca. 150 Anwender mit Schwerpunkt auf CAD/CAE-Patching und Rollout nach OEM-Vorgaben (Siemens NX, CATIA V5, Abaqus).",
+      "highlights": "Standortbetreuung (Windows/Linux) | Helpdesk- und KPI-Verantwortung | Smartphone- und Endpoint-Security-Administration | Technische Mitwirkung an Zutrittskontroll- und Sicherheitssystemen",
+      "current": false
+    },
+    "experience_5": {
+      "company": "Lidl Dienstleistung GmbH & Co. KG, Neckarsulm, DE",
+      "position": "Mitarbeiter IT-Support",
+      "start_date": "2019",
+      "end_date": "2021",
+      "description": "1st- und 2nd-Level-IT-Support fuer ca. 35.000 Mitarbeitende in 39 Gesellschaften (ServiceNow/Hotline).",
+      "highlights": "1st/2nd-Level-Support fuer grosse Nutzerbasis | Key-User fuer Lotus Notes, Microsoft Exchange und CUT | Postfach-/Rechteverwaltung, AD-Gruppen | Exchange-Automatisierung per PowerShell | Revisions-/Zugriffspruefungen ueber mehrere Gesellschaften",
+      "current": false
+    },
+    "experience_6": {
+      "company": "Lidl Dienstleistung GmbH & Co. KG, Bad Wimpfen, DE",
+      "position": "Jr. Professional IT",
+      "start_date": "2021",
+      "end_date": "2025",
+      "description": "Low-Code-Entwicklung und technischer Ansprechpartner fuer Enterprise-Loesungen auf Mendix und OutSystems sowie High-Code-Automatisierung.",
+      "highlights": "Mendix 10 (StackIT/Schwarz Digits): Tarif-Eingruppierungstool in Entwicklung | Mendix Applikationsportal mit berechtigungsbasierter Kachelbereitstellung | Digitale Visitenkarte inkl. Mail-Share, QR-Scan und Wallet-Option | OutSystems 11 (Azure): Einarbeitungsplan, Business Engine (Digitale Formulare), PRIA | Arcplan/Longview + MSSQL/SSIS: Goods Supply Portal fuer soziale Einrichtungen sowie Selenium-Login-Tests in C#",
+      "current": false
+    }
+  },
+  "skills": {
+    "title": "Tech Skills",
+    "stack_fullstack_title": "Fullstack Web Development (MERN)",
+    "stack_fullstack_items": "Frontend: ReactJS | Backend: NodeJS | Backend: Express | Datenbanken: MySQL | Datenbanken: MongoDB | Datenbanken: PostgreSQL",
+    "stack_lowcode_title": "Low-Code Development",
+    "stack_lowcode_items": "OutSystems 11: Service Studio | OutSystems 11: Service Center | OutSystems 11: LifeTime | Mendix 10: Studio Pro",
+    "stack_devops_title": "DevOps & Versionierung",
+    "stack_devops_items": "Containerisierung: Docker | Reverse Proxy & Routing: Nginx Proxy Manager | Monitoring & Observability: Grafana | Versionsverwaltung & CI/CD: GIT | Versionsverwaltung & CI/CD: Azure DevOps",
+    "stack_tools_title": "Tools & Technologien",
+    "stack_tools_items": "Testing & APIs: Express | Testing & APIs: Postman"
+  },
+  "soft_skills": {
+    "title": "Weitere Fähigkeiten",
+    "architecture": {
+      "title": "Software Engineering & Architektur",
+      "items": "Clean Code & SOLID Prinzipien | REST-API Design | Schichten- & Service-Architektur | Unit- & Integrationstests"
+    },
+    "agile": {
+      "title": "Agile Zusammenarbeit",
+      "items": "Scrum & Kanban | User Stories & Reviews | Abstimmung mit Fachbereichen | Code Reviews & Pair Programming"
+    },
+    "devops": {
+      "title": "Betrieb & DevOps Basics",
+      "items": "Deployment auf Linux-Servern (Ubuntu, IONOS VPS) | Docker Containerisierung | Reverse Proxy & SSL mit Nginx Proxy Manager | Monitoring der Container mit Grafana"
+    }
+  },
+  "languages": {
+    "title": "Sprachkenntnisse",
+    "german": "Deutsch",
+    "english": "Englisch",
+    "serbian": "Serbisch",
+    "french": "Französisch",
+    "italian": "Italienisch",
+    "level_native": "Muttersprache",
+    "level_fluent": "Fließend",
+    "level_negotiation": "Verhandlungssicher",
+    "level_intermediate": "Mittelstufe",
+    "level_everyday": "Alltagstauglich",
+    "level_basic": "Grundkenntnisse"
+  },
+  "certificates": {
+    "title": "Zertifikate",
+    "description": "Ausgewählte Qualifikationen und Nachweise mit direktem Zugriff.",
+    "view": "Ansehen",
+    "zoom_in": "Vergrößern",
+    "zoom_out": "Verkleinern",
+    "reset": "Zurücksetzen",
+    "close": "Schließen",
+    "certificate": "Zertifikat",
+    "scrimba": {
+      "title": "Scrimba Fullstack Developer",
+      "subtitle": "Praktisch validierte Fullstack-Kompetenzen"
+    },
+    "mendix": {
+      "title": "Mendix Rapid Application Developer",
+      "subtitle": "Low-Code Projektentwicklung und Mendix-Expertise"
+    },
+    "kmk": {
+      "title": "KMK Zertifikat Englisch B2",
+      "subtitle": "Zertifizierte Sprachkompetenz Englisch B2"
+    },
+    "stanley": {
+      "title": "Stanley Security Unison Zertifikat",
+      "subtitle": "Technische Schulung und Sicherheitsprozess-Kenntnisse"
+    }
+  },
+  "legal": {
+    "imprint": {
+      "title": "Impressum",
+      "intro": "Angaben gemäß § 5 TMG.",
+      "provider_heading": "Diensteanbieter",
+      "name_label": "Name",
+      "address_label": "Anschrift",
+      "contact_heading": "Kontakt",
+      "email_label": "E-Mail",
+      "status_heading": "Status",
+      "status_value": "Privatperson",
+      "vat_heading": "Umsatzsteuer-ID",
+      "vat_value": "Keine Umsatzsteuer-Identifikationsnummer vorhanden.",
+      "liability_heading": "Haftung für Inhalte",
+      "liability_text": "Die Inhalte dieser Website wurden mit Sorgfalt erstellt. Für Richtigkeit, Vollständigkeit und Aktualität wird jedoch keine Gewähr übernommen.",
+      "copyright_heading": "Urheberrecht",
+      "copyright_text": "Die auf dieser Website erstellten Inhalte und Werke unterliegen dem Urheberrecht. Eine Vervielfältigung oder Verwendung außerhalb der Grenzen des Urheberrechts bedarf der vorherigen Zustimmung."
+    },
+    "privacy": {
+      "title": "Datenschutzhinweis",
+      "intro": "Diese Seite informiert über die Verarbeitung personenbezogener Daten auf dieser Website.",
+      "controller_heading": "Verantwortlicher",
+      "name_label": "Name",
+      "address_label": "Anschrift",
+      "email_label": "E-Mail",
+      "processing_heading": "Verarbeitete Daten",
+      "processing_item_1": "Server-Logdaten beim Aufruf der Website (z. B. IP-Adresse, Datum, Uhrzeit, User-Agent).",
+      "processing_item_2": "Angaben aus dem Kontaktformular (Name, E-Mail, Betreff, Nachricht) zur Bearbeitung deiner Anfrage.",
+      "processing_item_3": "Technische Schutzdaten zur Spam-Abwehr (Rate-Limiting, Honeypot, Cloudflare Turnstile).",
+      "recipients_heading": "Empfänger und Dienstleister",
+      "recipients_text": "Diese Website wird bei IONOS gehostet. Für den Spamschutz des Kontaktformulars wird Cloudflare Turnstile eingesetzt.",
+      "retention_heading": "Speicherdauer",
+      "retention_text": "Kontaktanfragen werden grundsätzlich für etwa 2 Wochen gespeichert und danach gelöscht, sofern keine gesetzlichen Aufbewahrungspflichten bestehen.",
+      "tracking_heading": "Cookies und Tracking",
+      "tracking_text": "Derzeit werden keine Analyse- oder Marketing-Tools eingesetzt.",
+      "rights_heading": "Deine Rechte",
+      "rights_text": "Du hast das Recht auf Auskunft, Berichtigung, Löschung, Einschränkung der Verarbeitung sowie Widerspruch. Für Anfragen genügt eine E-Mail an die oben genannte Adresse."
+    }
+  }
+}

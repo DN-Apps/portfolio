@@ -1,0 +1,306 @@
+{
+  "common": {
+    "name": "Daniel",
+    "title": "Full Stack Developer",
+    "description": "Passionate about building beautiful and functional applications",
+    "nav": {
+      "about": "About",
+      "projects": "Projects",
+      "personal": "Personal",
+      "career": "Career",
+      "skills": "Skills",
+      "languages": "Languages",
+      "contact": "Contact"
+    },
+    "footer": {
+      "links_title": "Links",
+      "contact_title": "Contact",
+      "legal_title": "Legal"
+    },
+    "legal": {
+      "imprint": "Imprint",
+      "privacy": "Privacy"
+    }
+  },
+  "hero": {
+    "greeting": "Hi! My name is:",
+    "name": "Daniel Nedic",
+    "passion": "My passion: Software Development",
+    "title": "Fullstack Developer with experience in:",
+    "tech_skills": "React | Node.js | SQL | Docker | Git | Server Deployments | Mendix | Outsystems | Agile project teams (Lidl) | Software projects (Lidl)",
+    "brings": "What I bring to the table:",
+    "brings_list": "4+ years of software development in enterprise environments | Self-developed web applications (React/Node/MySQL) | Understanding of clean code, architecture and user focus | Teamwork, clear communication, reliable working style",
+    "focus": "Current focus:",
+    "focus_list": "Deepening my knowledge in modern web stack & fullstack engineering | Building and hosting own projects for practical application",
+    "languages_intro": "Languages: German, English (B2), Serbian, French (basics)",
+    "closing": "Open for new opportunities in web development / application engineering."
+  },
+  "contact": {
+    "title": "Contact Form",
+    "description": "Feel free to send me a message. I will get back to you as soon as possible.",
+    "name_label": "Name",
+    "name_placeholder": "Your name",
+    "email_label": "Email",
+    "email_placeholder": "your@email.com",
+    "subject_label": "Subject",
+    "subject_placeholder": "What is this about?",
+    "message_label": "Message",
+    "message_placeholder": "Your message...",
+    "submit": "Send message",
+    "submitting": "Sending...",
+    "success": "Thanks, your message has been sent.",
+    "error_required": "Please fill out name, email and message.",
+    "error_generic": "Sending failed. Please try again.",
+    "error_captcha": "Please confirm that you are not a bot.",
+    "privacy_notice": "By submitting, you agree that your details are processed to handle your request.",
+    "privacy_notice_link": "Read the privacy notice"
+  },
+  "about": {
+    "title": "About Me",
+    "intro": "Welcome to my portfolio!",
+    "experience": "With several years of experience in Full Stack Development, I bring comprehensive knowledge of modern web technologies.",
+    "current_focus": "My current focus is on developing scalable applications with Next.js and TypeScript as well as DevOps optimization.",
+    "strengths": "I excel in clean code architecture, agile collaboration, and continuous learning."
+  },
+  "projects": {
+    "title": "My Projects",
+    "completed": "Completed",
+    "in_development": "In Development",
+    "planned": "Planned",
+    "target_group_label": "Target group",
+    "functionalities_label": "Features",
+    "project_1": {
+      "title": "Monteurzimmer Nedic",
+      "description": "A project for providing worker accommodations with modern equipment and an easy booking option.",
+      "target_group": "Construction companies & employees, students",
+      "functionalities": "Booking form | Media library | Straightforward contact"
+    },
+    "project_2": {
+      "title": "Digital Business Card",
+      "description": "The digital business card for modern networking - fast, stylish, and smart.",
+      "target_group": "People interested in digitalization",
+      "functionalities": "Contact data input | Company selection | Browser visualization | Scan to phone"
+    },
+    "project_3": {
+      "title": "Content Management System",
+      "description": "Headless CMS with TypeScript, GraphQL API and React Admin Panel"
+    },
+    "project_4": {
+      "title": "App Manager",
+      "description": "An application portal that centrally manages an application pool where values can be created, read, updated, and deleted.",
+      "target_group": "Own application pool",
+      "functionalities": "CRUD and reporting functions"
+    },
+    "project_5": {
+      "title": "PWA, Native, AI...",
+      "description": "My goal is to dive deeply into forward-looking technologies in order to build innovative digital solutions.",
+      "target_group": "Future prospects and customers",
+      "functionalities": "Offline capabilities | GPT integrations | Integrate system components | Data analytics | etc."
+    }
+  },
+  "personal": {
+    "title": "Personal",
+    "intro": "Beyond the Code",
+    "hobbies": "In my free time, I'm interested in technology, travel and fitness. I love discovering new cultures and developing myself personally.",
+    "location": "I currently live in Germany and am open to remote collaboration worldwide.",
+    "sport_title": "Sport",
+    "sport_text": "I regularly do strength and endurance training and enjoy long walks.",
+    "sport_goals_label": "Goals",
+    "sport_goals": "To document my progress and improve where improvements are possible.",
+    "sport_why_label": "Why",
+    "sport_why": "I value my mental and physical health.",
+    "sport_favorites_label": "My favorites",
+    "sport_favorites": "Vineyard runs | High-volume strength sessions | Small-sided football | etc.",
+    "woodwork_title": "Forest Work",
+    "woodwork_text": "Growing up with weekends where everyone prepared wood together in the city forest to heat through winter fills me with pride.",
+    "woodwork_goal_label": "Goal",
+    "woodwork_goal": "Together it was always faster and made the work much more enjoyable.",
+    "woodwork_useful_label": "Useful lesson",
+    "woodwork_useful": "I learned a lot about work and wages. Woodwork warms you at least twice: while working and while heating.",
+    "woodwork_tools_label": "Tools",
+    "woodwork_tools": "Own chainsaw with required equipment | Chainsaw license | etc.",
+    "diy_title": "DIY",
+    "diy_text": "I enjoy repairing things at home and love being hands-on with practical work.",
+    "diy_goal_label": "Goal",
+    "diy_goal": "Things break, that happens. Away from throwaway culture, toward recycling and upcycling.",
+    "diy_useful_label": "Useful",
+    "diy_useful": "Sustainability and technical understanding across a wide range of topics have interested me since childhood.",
+    "diy_resources_label": "Resources",
+    "diy_resources": "AI support | Written guides | YouTube tutorials | Consult professionals for sensitive cases",
+    "action_title": "Action & Adventure",
+    "action_text": "I love adventures like skydiving or cliff jumping - adrenaline is my friend!",
+    "action_goals_label": "Goals",
+    "action_goals": "Get out of my own comfort zone.",
+    "action_reflection_label": "Reflection",
+    "action_reflection": "Through this, I repeatedly discover my limits in new ways. It pushes me to reflect on my abilities and keep setting new goals.",
+    "action_drivers_label": "Drivers",
+    "action_drivers": "Basic athleticism | Curiosity about the unknown | Trying new things"
+  },
+  "career": {
+    "title": "Career Path",
+    "experience_0": {
+      "company": "Valmet Automotive Holding GmbH & Co. KG, Bad Friedrichshall, DE",
+      "position": "IT Management Assistant Apprenticeship",
+      "start_date": "2015",
+      "end_date": "2018",
+      "description": "Apprenticeship focused on IT and business administration processes.",
+      "current": false
+    },
+    "experience_1": {
+      "company": "Tech Startup",
+      "position": "Senior Full Stack Developer",
+      "start_date": "2022",
+      "end_date": "Today",
+      "description": "Leading full stack projects, architectural decisions and team mentoring",
+      "current": true
+    },
+    "experience_2": {
+      "company": "Digital Agency",
+      "position": "Full Stack Developer",
+      "start_date": "2020",
+      "end_date": "2022",
+      "description": "Development of web applications with React and Node.js for various clients",
+      "current": false
+    },
+    "experience_3": {
+      "company": "Web Development Company",
+      "position": "Junior Developer",
+      "start_date": "2019",
+      "end_date": "2020",
+      "description": "First steps as a web developer with JavaScript and Vue.js",
+      "current": false
+    },
+    "experience_4": {
+      "company": "Valmet Automotive Holding GmbH & Co. KG, Bad Friedrichshall, DE",
+      "position": "IT System Administrator",
+      "start_date": "2018",
+      "end_date": "2019",
+      "description": "IT system administration for around 150 users with focus on CAD/CAE patching and OEM-compliant rollouts (Siemens NX, CATIA V5, Abaqus).",
+      "highlights": "Site support (Windows/Linux) | Helpdesk and KPI ownership | Smartphone and endpoint security administration | Technical contribution to access control and security systems",
+      "current": false
+    },
+    "experience_5": {
+      "company": "Lidl Dienstleistung GmbH & Co. KG, Neckarsulm, DE",
+      "position": "IT Support Specialist",
+      "start_date": "2019",
+      "end_date": "2021",
+      "description": "Provided 1st and 2nd level IT support for about 35,000 employees across 39 entities (ServiceNow/hotline).",
+      "highlights": "1st/2nd-level support for a large user base | Key-user for Lotus Notes, Microsoft Exchange and CUT | Mailbox/rights management, AD groups | Exchange automation via PowerShell | Compliance and access reviews across multiple entities",
+      "current": false
+    },
+    "experience_6": {
+      "company": "Lidl Dienstleistung GmbH & Co. KG, Bad Wimpfen, DE",
+      "position": "Jr. Professional IT",
+      "start_date": "2021",
+      "end_date": "2025",
+      "description": "Low-code developer and technical point of contact for enterprise solutions on Mendix and OutSystems, plus high-code test automation.",
+      "highlights": "Mendix 10 (StackIT/Schwarz Digits): tariff classification tool in development | Mendix application portal with permission-based tile delivery | Digital business card with mail share, QR scan, and wallet option | OutSystems 11 (Azure): onboarding plan, Business Engine (digital forms), PRIA | Arcplan/Longview + MSSQL/SSIS: goods supply portal for social institutions and Selenium login tests in C#",
+      "current": false
+    }
+  },
+  "skills": {
+    "title": "Tech Skills",
+    "stack_fullstack_title": "Fullstack Web Development (MERN)",
+    "stack_fullstack_items": "Frontend: ReactJS | Backend: NodeJS | Backend: Express | Databases: MySQL | Databases: MongoDB | Databases: PostgreSQL",
+    "stack_lowcode_title": "Low-Code Development",
+    "stack_lowcode_items": "OutSystems 11: Service Studio | OutSystems 11: Service Center | OutSystems 11: LifeTime | Mendix 10: Studio Pro",
+    "stack_devops_title": "DevOps & Versioning",
+    "stack_devops_items": "Containerization: Docker | Reverse Proxy & Routing: Nginx Proxy Manager | Monitoring & Observability: Grafana | Version Control & CI/CD: GIT | Version Control & CI/CD: Azure DevOps",
+    "stack_tools_title": "Tools & Technologies",
+    "stack_tools_items": "Testing & APIs: Express | Testing & APIs: Postman"
+  },
+  "soft_skills": {
+    "title": "Additional Skills",
+    "architecture": {
+      "title": "Software Engineering & Architecture",
+      "items": "Clean Code & SOLID principles | REST API design | Layered and service architecture | Unit and integration tests"
+    },
+    "agile": {
+      "title": "Agile Collaboration",
+      "items": "Scrum & Kanban | User stories & reviews | Collaboration with business units | Code reviews & pair programming"
+    },
+    "devops": {
+      "title": "Operations & DevOps Basics",
+      "items": "Deployment on Linux servers (Ubuntu, IONOS VPS) | Docker containerization | Reverse proxy & SSL with Nginx Proxy Manager | Container monitoring with Grafana"
+    }
+  },
+  "languages": {
+    "title": "Language Skills",
+    "german": "German",
+    "english": "English",
+    "serbian": "Serbian",
+    "french": "French",
+    "italian": "Italian",
+    "level_native": "Native",
+    "level_fluent": "Fluent",
+    "level_negotiation": "Negotiation-ready",
+    "level_intermediate": "Intermediate",
+    "level_everyday": "Everyday use",
+    "level_basic": "Basic"
+  },
+  "certificates": {
+    "title": "Certificates",
+    "description": "Selected qualifications and proofs with direct access.",
+    "view": "View",
+    "zoom_in": "Zoom in",
+    "zoom_out": "Zoom out",
+    "reset": "Reset",
+    "close": "Close",
+    "certificate": "Certificate",
+    "scrimba": {
+      "title": "Scrimba Fullstack Developer",
+      "subtitle": "Practically validated fullstack skills"
+    },
+    "mendix": {
+      "title": "Mendix Rapid Application Developer",
+      "subtitle": "Low-code project development and Mendix expertise"
+    },
+    "kmk": {
+      "title": "KMK English Certificate B2",
+      "subtitle": "Certified English language proficiency B2"
+    },
+    "stanley": {
+      "title": "Stanley Security Unison Certificate",
+      "subtitle": "Technical training and security process knowledge"
+    }
+  },
+  "legal": {
+    "imprint": {
+      "title": "Imprint",
+      "intro": "Information according to German Telemedia Act (Section 5 TMG).",
+      "provider_heading": "Service Provider",
+      "name_label": "Name",
+      "address_label": "Address",
+      "contact_heading": "Contact",
+      "email_label": "Email",
+      "status_heading": "Status",
+      "status_value": "Private individual",
+      "vat_heading": "VAT ID",
+      "vat_value": "No VAT identification number available.",
+      "liability_heading": "Liability for Content",
+      "liability_text": "The content of this website has been created with care. However, no guarantee is given for accuracy, completeness or timeliness.",
+      "copyright_heading": "Copyright",
+      "copyright_text": "The content and works created on this website are subject to copyright. Reproduction or use outside the limits of copyright law requires prior consent."
+    },
+    "privacy": {
+      "title": "Privacy Notice",
+      "intro": "This page explains how personal data is processed on this website.",
+      "controller_heading": "Controller",
+      "name_label": "Name",
+      "address_label": "Address",
+      "email_label": "Email",
+      "processing_heading": "Processed Data",
+      "processing_item_1": "Server log data when accessing the website (e.g., IP address, date, time, user agent).",
+      "processing_item_2": "Data from the contact form (name, email, subject, message) to process your request.",
+      "processing_item_3": "Technical anti-spam data (rate limiting, honeypot, Cloudflare Turnstile).",
+      "recipients_heading": "Recipients and Service Providers",
+      "recipients_text": "This website is hosted by IONOS. Cloudflare Turnstile is used to protect the contact form against spam.",
+      "retention_heading": "Retention Period",
+      "retention_text": "Contact requests are generally stored for about 2 weeks and then deleted, unless legal retention obligations apply.",
+      "tracking_heading": "Cookies and Tracking",
+      "tracking_text": "No analytics or marketing tools are currently used.",
+      "rights_heading": "Your Rights",
+      "rights_text": "You have the right to access, rectification, erasure, restriction of processing and objection. For requests, an email to the address above is sufficient."
+    }
+  }
+}

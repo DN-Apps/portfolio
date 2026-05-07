@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://portfolio.ned-it.de/sitemap.xml
+
+# Disallow admin and private sections if any
+Disallow: /admin
+Disallow: /private

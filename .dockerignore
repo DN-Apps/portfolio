@@ -1,0 +1,41 @@
+# Dependencies & Build
+
+node_modules
+.next
+dist
+build
+
+# Env-Dateien (Secrets nie ins Image)
+
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Logs
+
+\*.log
+
+# OS & IDE
+
+.DS_Store
+.idea
+.vscode
+_.swp
+_.swo
+\*~
+
+# Turbo
+
+.turbo
+
+# Docker & Git (nicht im Image nötig)
+
+Dockerfile
+.dockerignore
+.git
+.gitignore
+
+# Docs
+
+README.md

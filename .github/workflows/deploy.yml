@@ -1,0 +1,108 @@
+name: Build & Deploy
+
+on:
+  push:
+    branches:
+      - main
+      - qa
+
+jobs:
+  # ──────────────────────────────────────────
+  # QA → Build Staging Image + Deploy Staging
+  # ──────────────────────────────────────────
+  build-and-deploy-staging:
+    name: Build & Deploy Staging
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/qa'
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build & Push Staging Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/dn-apps/portfolio:staging-latest
+            ghcr.io/dn-apps/portfolio:staging-sha-${{ github.sha }}
+          build-args: |
+            NEXT_PUBLIC_APP_NAME=${{ secrets.NEXT_PUBLIC_APP_NAME }}
+            NEXT_PUBLIC_APP_URL=${{ secrets.STAGING_NEXT_PUBLIC_APP_URL }}
+            NEXT_PUBLIC_DIRECTUS_URL=${{ secrets.STAGING_NEXT_PUBLIC_DIRECTUS_URL }}
+            NEXT_PUBLIC_TURNSTILE_SITE_KEY=${{ secrets.STAGING_NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+            NEXT_PUBLIC_GITHUB_URL=${{ secrets.NEXT_PUBLIC_GITHUB_URL }}
+            NEXT_PUBLIC_LINKEDIN_URL=${{ secrets.NEXT_PUBLIC_LINKEDIN_URL }}
+
+      - name: Deploy to Staging
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.STAGING_HOST }}
+          username: ${{ secrets.STAGING_USER }}
+          key: ${{ secrets.STAGING_SSH_KEY }}
+          script: |
+            echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u dn-apps --password-stdin
+            cd /opt/projects/portfolio
+            docker compose pull
+            docker compose up -d --remove-orphans && echo "Staging Deploy erfolgreich" || (echo "Deploy fehlgeschlagen – alter Container läuft weiter" && exit 1)
+
+  # ──────────────────────────────────────────
+  # MAIN → Build Prod Image + Deploy Prod
+  # ──────────────────────────────────────────
+  build-and-deploy-prod:
+    name: Build & Deploy Production
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/main'
+    permissions:
+      contents: read
+      packages: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build & Push Prod Image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          push: true
+          tags: |
+            ghcr.io/dn-apps/portfolio:prod-latest
+            ghcr.io/dn-apps/portfolio:prod-sha-${{ github.sha }}
+          build-args: |
+            NEXT_PUBLIC_APP_NAME=${{ secrets.NEXT_PUBLIC_APP_NAME }}
+            NEXT_PUBLIC_APP_URL=${{ secrets.PROD_NEXT_PUBLIC_APP_URL }}
+            NEXT_PUBLIC_DIRECTUS_URL=${{ secrets.PROD_NEXT_PUBLIC_DIRECTUS_URL }}
+            NEXT_PUBLIC_TURNSTILE_SITE_KEY=${{ secrets.PROD_NEXT_PUBLIC_TURNSTILE_SITE_KEY }}
+            NEXT_PUBLIC_GITHUB_URL=${{ secrets.NEXT_PUBLIC_GITHUB_URL }}
+            NEXT_PUBLIC_LINKEDIN_URL=${{ secrets.NEXT_PUBLIC_LINKEDIN_URL }}
+
+      - name: Deploy to Production
+        uses: appleboy/ssh-action@v1
+        with:
+          host: ${{ secrets.PROD_HOST }}
+          username: ${{ secrets.PROD_USER }}
+          key: ${{ secrets.PROD_SSH_KEY }}
+          script: |
+            echo ${{ secrets.GHCR_TOKEN }} | docker login ghcr.io -u dn-apps --password-stdin
+            cd /opt/projects/portfolio
+            docker compose pull
+            docker compose up -d --remove-orphans && echo "Prod Deploy erfolgreich" || (echo "Deploy fehlgeschlagen – alter Container läuft weiter" && exit 1)

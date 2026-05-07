@@ -1,0 +1,230 @@
+/* Soft Skills sind bewusst stärker visuell inszeniert als Hard Skills, weil
+  hier Themenfelder statt konkreter Technologien transportiert werden. */
+.soft-skills-section {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg) 0%,
+    var(--color-bg-light) 100%
+  );
+  border-bottom: 1px solid var(--color-border);
+}
+
+.soft-skills-section h2 {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.soft-skills-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--spacing-lg);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.soft-skill-card {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  padding: var(--spacing-lg);
+  border-radius: 12px;
+  text-align: center;
+  transition: var(--transition);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Das Karten-Overlay verstärkt den Hover-Zustand, ohne den eigentlichen Text
+  mit zusätzlichen Farben oder Boxen zu überladen. */
+.soft-skill-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  right: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle,
+    rgba(0, 212, 255, 0.1) 0%,
+    transparent 70%
+  );
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.soft-skill-card:hover::before {
+  opacity: 1;
+}
+
+.soft-skill-card:hover {
+  border-color: var(--color-primary);
+  transform: translateY(-12px);
+  box-shadow: 0 20px 50px rgba(0, 212, 255, 0.2);
+}
+
+.skill-icon {
+  font-size: 3rem;
+  margin-bottom: var(--spacing-md);
+  display: inline-block;
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.soft-skill-card h3 {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+  font-size: 1.3rem;
+}
+
+.soft-skill-card p {
+  color: var(--color-text-muted);
+  line-height: 1.8;
+}
+
+.soft-skill-list {
+  text-align: left;
+  color: var(--color-text-muted);
+  margin: 0;
+  padding-left: 1.1rem;
+  display: grid;
+  gap: 0.45rem;
+}
+
+.soft-skill-list li {
+  line-height: 1.5;
+}
+
+/* Mobile und Landscape reduzieren Icon- und Kartenmaße, damit die Section bei
+  gleicher visueller Sprache deutlich kompakter bleibt. */
+@media (max-width: 991px) {
+  .soft-skills-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: 1fr;
+    gap: var(--spacing-md);
+  }
+
+  .soft-skill-card {
+    padding: var(--spacing-md);
+  }
+
+  .skill-icon {
+    font-size: 2.5rem;
+  }
+}
+
+@media (max-width: 991px) and (orientation: landscape) {
+  .soft-skills-section {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+
+  .soft-skills-section h2 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .skill-icon {
+    font-size: 2rem;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .soft-skill-card h3 {
+    font-size: 1.1rem;
+    margin-bottom: var(--spacing-sm);
+  }
+}
+
+@media (min-width: 667px) and (max-width: 896px) and (min-height: 376px) and (max-height: 430px) and (orientation: landscape) {
+  .soft-skills-section {
+    padding: var(--spacing-sm) var(--spacing-md);
+  }
+
+  .soft-skills-section h2 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  .soft-skills-grid {
+    gap: var(--spacing-sm);
+  }
+
+  .soft-skill-card {
+    padding: var(--spacing-sm);
+  }
+
+  .skill-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.45rem;
+  }
+
+  .soft-skill-card h3 {
+    font-size: 0.95rem;
+    margin-bottom: 0.35rem;
+  }
+
+  .soft-skill-card p,
+  .soft-skill-list {
+    font-size: 0.84rem;
+    line-height: 1.35;
+  }
+}
+
+@media (min-width: 900px) and (max-width: 1199px) and (min-height: 431px) and (max-height: 767px) and (orientation: landscape) {
+  .soft-skills-section {
+    padding: var(--spacing-md) var(--spacing-md);
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-md);
+  }
+
+  .soft-skill-card {
+    padding: var(--spacing-md);
+  }
+}
+
+@media (min-width: 1024px) and (max-width: 1366px) and (min-height: 768px) and (max-height: 991px) and (orientation: landscape) {
+  .soft-skills-section {
+    padding: var(--spacing-lg) var(--spacing-lg);
+  }
+
+  .soft-skills-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: var(--spacing-lg);
+  }
+}
+
+@media (max-width: 375px) {
+  .soft-skills-section {
+    padding: var(--spacing-md) var(--spacing-sm);
+  }
+
+  .soft-skills-section h2 {
+    margin-bottom: var(--spacing-md);
+  }
+
+  .soft-skill-card {
+    padding: var(--spacing-sm);
+  }
+
+  .skill-icon {
+    font-size: 1.7rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .soft-skill-card h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .soft-skill-card p,
+  .soft-skill-list {
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+}

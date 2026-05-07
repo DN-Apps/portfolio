@@ -1,0 +1,306 @@
+{
+  "common": {
+    "name": "Daniel",
+    "title": "Full Stack Developer",
+    "description": "Strastven u pravljenju lepih i funkcionalnih aplikacija",
+    "nav": {
+      "about": "O meni",
+      "projects": "Projekti",
+      "personal": "Lično",
+      "career": "Karijera",
+      "skills": "Veštine",
+      "languages": "Jezici",
+      "contact": "Kontakt"
+    },
+    "footer": {
+      "links_title": "Linkovi",
+      "contact_title": "Kontakt",
+      "legal_title": "Pravne informacije"
+    },
+    "legal": {
+      "imprint": "Impresum",
+      "privacy": "Zastita podataka"
+    }
+  },
+  "hero": {
+    "greeting": "Zdravo! Moje ime je:",
+    "name": "Daniel Nedic",
+    "passion": "Moja strast: Razvoj softvera",
+    "title": "Fullstack programer sa iskustvom u:",
+    "tech_skills": "React | Node.js | SQL | Docker | Git | Server Deployments | Mendix | Outsystems | Agile proektni timovi (Lidl) | Softverski projekti (Lidl)",
+    "brings": "Šta donosim:",
+    "brings_list": "4+ godine razvoja softvera u korporativnom okruženju | Samostalno razvijene veb aplikacije (React/Node/MySQL) | Razumevanje čistog koda, arhitekture i fokusa na korisnika | Timski rad, jasna komunikacija, pouzdanost",
+    "focus": "Trenutni fokus:",
+    "focus_list": "Produbljivanje znanja o modernom veb stack-u & fullstack inženjerstvu | Izrada i hostovanje sopstvenih projekata za praktičnu primenu",
+    "languages_intro": "Jezici: Nemački, Engleski (B2), Srpski, Francuski (osnovni)",
+    "closing": "Otvoren za nove mogućnosti u veb razvoju / application engineering."
+  },
+  "contact": {
+    "title": "Kontakt formular",
+    "description": "Slobodno mi posalji poruku. Odgovoricu cim pre budem mogao.",
+    "name_label": "Ime",
+    "name_placeholder": "Tvoje ime",
+    "email_label": "Email",
+    "email_placeholder": "tvoj@email.com",
+    "subject_label": "Tema",
+    "subject_placeholder": "O cemu se radi?",
+    "message_label": "Poruka",
+    "message_placeholder": "Tvoja poruka...",
+    "submit": "Pošalji poruku",
+    "submitting": "Slanje...",
+    "success": "Hvala, poruka je uspešno poslata.",
+    "error_required": "Molim popuni ime, e-mail i poruku.",
+    "error_generic": "Slanje nije uspelo. Pokušaj ponovo.",
+    "error_captcha": "Potvrdi da nisi bot.",
+    "privacy_notice": "Slanjem formulara pristajes na obradu podataka radi odgovora na tvoj upit.",
+    "privacy_notice_link": "Procitaj obavestenje o zastiti podataka"
+  },
+  "about": {
+    "title": "O meni",
+    "intro": "Dobrodošli na moju portfolio stranicu!",
+    "experience": "Sa nekoliko godina iskustva u Full Stack Development-u, donesem sveobuhvatno znanje o modernim veb tehnologijama.",
+    "current_focus": "Moj trenutni fokus je na razvoju skalabilnih aplikacija sa Next.js i TypeScript-om kao i DevOps optimizacijom.",
+    "strengths": "Odličan sam u čistoj arhitekturi koda, agilnoj saradnji i kontinuiranom učenju."
+  },
+  "projects": {
+    "title": "Moi Projekti",
+    "completed": "Završeno",
+    "in_development": "U razvoju",
+    "planned": "Planirano",
+    "target_group_label": "Ciljna grupa",
+    "functionalities_label": "Funkcionalnosti",
+    "project_1": {
+      "title": "Monteurzimmer Nedic",
+      "description": "Projekat za obezbeđivanje smeštaja za radnike sa modernom opremom i jednostavnom opcijom rezervacije.",
+      "target_group": "Građevinske firme i zaposleni, studenti",
+      "functionalities": "Formular za rezervaciju | Medijateka | Jednostavan kontakt"
+    },
+    "project_2": {
+      "title": "Digitalna vizitkarta",
+      "description": "Digitalna vizitkarta za moderno umrezavanje - brzo, stilizovano i pametno.",
+      "target_group": "Zainteresovani za digitalizaciju",
+      "functionalities": "Unos kontakt podataka | Izbor kompanije | Vizuelizacija u browseru | Scan to phone"
+    },
+    "project_3": {
+      "title": "Content Management System",
+      "description": "Headless CMS sa TypeScript-om, GraphQL API-jem i React admin panelom"
+    },
+    "project_4": {
+      "title": "App-Manager",
+      "description": "Aplikacioni portal koji centralizovano upravlja aplikacionim pool-om, u kome je moguce dodavati, citati, azurirati i brisati vrednosti.",
+      "target_group": "Sopstveni application-pool",
+      "functionalities": "CRUD i reporting funkcije"
+    },
+    "project_5": {
+      "title": "PWA, Native, AI...",
+      "description": "Moj cilj je da se intenzivno bavim tehnologijama buducnosti kako bih razvijao inovativna digitalna resenja.",
+      "target_group": "Buduci zainteresovani i klijenti",
+      "functionalities": "Offline mogucnosti | GPT integracije | Integracija sistemskih komponenti | Analiza podataka | itd."
+    }
+  },
+  "personal": {
+    "title": "Lično o meni",
+    "intro": "Van koda",
+    "hobbies": "U slobodnom vremenu zanima me tehnologija, putovanje i fizička aktivnost. Volim da otkrivam nove kulture i da se razvijam lično.",
+    "location": "Trenutno živim u Nemačkoj i otvoren sam za udaljenu saradnju širom sveta.",
+    "sport_title": "Sport",
+    "sport_text": "Redovno treniram snagu i izdrzljivost i uzivam u dugim setnjama.",
+    "sport_goals_label": "Ciljevi",
+    "sport_goals": "Da dokumentujem svoj napredak i unapredjujem se tamo gde postoji prostor za poboljsanje.",
+    "sport_why_label": "Zasto",
+    "sport_why": "Cenim svoje mentalno i fizicko zdravlje.",
+    "sport_favorites_label": "Moji favoriti",
+    "sport_favorites": "Trcanje kroz vinograde | Visokovolumenski trening snage | Mali fudbal | itd.",
+    "woodwork_title": "Rad u sumi",
+    "woodwork_text": "Odrastanje uz vikende kada svi zajedno pripremamo drva u gradskog sumi da bismo se grejali tokom zime ispunjava me ponosom.",
+    "woodwork_goal_label": "Cilj",
+    "woodwork_goal": "Zajedno je uvek bilo brze i uz to je posao bio mnogo zabavniji.",
+    "woodwork_useful_label": "Korisno",
+    "woodwork_useful": "Mnogo sam naucio o radu i zaradi. Rad sa drvetom greje najmanje dva puta: tokom rada i tokom grejanja.",
+    "woodwork_tools_label": "Alati",
+    "woodwork_tools": "Licna motorna testera sa potrebnom opremom | Sertifikat za motornu testeru | itd.",
+    "diy_title": "Kucni majstor",
+    "diy_text": "Volim da popravljam stvari u domacinstvu i uzivam u prakticnom radu.",
+    "diy_goal_label": "Cilj",
+    "diy_goal": "Stvari se kvare, to je normalno. Odustajanje od kulture bacanja, ka reciklazi i upciklazi.",
+    "diy_useful_label": "Korisno",
+    "diy_useful": "Odrzivost i tehnicko razumevanje sirokog spektra stvari zanimaju me jos od detinjstva.",
+    "diy_resources_label": "Pomoc",
+    "diy_resources": "AI podrska | Pisana uputstva | YouTube uputstva | Konsultovanje profesionalaca u osetljivim slucajevima",
+    "action_title": "Akcija i avantura",
+    "action_text": "Volim avanture kao sto su skok padobranom ili skokovi sa litica - adrenalin je moj prijatelj!",
+    "action_goals_label": "Ciljevi",
+    "action_goals": "Izlazak iz sopstvene zone komfora.",
+    "action_reflection_label": "Refleksija",
+    "action_reflection": "Na taj nacin iznova upoznajem svoje granice. To me podstice da razmisljam o svojim sposobnostima i da stalno postavljam nove ciljeve.",
+    "action_drivers_label": "Pokretaci",
+    "action_drivers": "Osnovna atletika | Radoznalost prema nepoznatom | Isprobavanje novih stvari"
+  },
+  "career": {
+    "title": "Karijerski put",
+    "experience_0": {
+      "company": "Valmet Automotive Holding GmbH & Co. KG, Bad Friedrichshall, DE",
+      "position": "Pripravnicka obuka Informaticki komercijalista",
+      "start_date": "2015",
+      "end_date": "2018",
+      "description": "Obuka fokusirana na IT i komercijalne poslovne procese.",
+      "current": false
+    },
+    "experience_1": {
+      "company": "Tech Startup",
+      "position": "Senior Full Stack Developer",
+      "start_date": "2022",
+      "end_date": "Danas",
+      "description": "Vođenje Full Stack projekata, arhitektonske odluke i mentoring tima",
+      "current": true
+    },
+    "experience_2": {
+      "company": "Digital Agency",
+      "position": "Full Stack Developer",
+      "start_date": "2020",
+      "end_date": "2022",
+      "description": "Razvoj veb aplikacija sa React-om i Node.js-om za različite klijente",
+      "current": false
+    },
+    "experience_3": {
+      "company": "Web Development Company",
+      "position": "Junior Developer",
+      "start_date": "2019",
+      "end_date": "2020",
+      "description": "Prve korake kao veb razvojac sa JavaScript-om i Vue.js-om",
+      "current": false
+    },
+    "experience_4": {
+      "company": "Valmet Automotive Holding GmbH & Co. KG, Bad Friedrichshall, DE",
+      "position": "IT sistem administrator",
+      "start_date": "2018",
+      "end_date": "2019",
+      "description": "IT sistem administracija za oko 150 korisnika sa fokusom na CAD/CAE patching i rollout prema OEM standardima (Siemens NX, CATIA V5, Abaqus).",
+      "highlights": "Podrska lokaciji (Windows/Linux) | Odgovornost za helpdesk i KPI-jeve | Administracija smartfona i endpoint bezbednosti | Tehnicka podrska za sisteme kontrole pristupa i alarmne sisteme",
+      "current": false
+    },
+    "experience_5": {
+      "company": "Lidl Dienstleistung GmbH & Co. KG, Neckarsulm, DE",
+      "position": "IT podrska",
+      "start_date": "2019",
+      "end_date": "2021",
+      "description": "1st i 2nd level IT podrska za oko 35.000 zaposlenih u 39 drustava (ServiceNow/telefon).",
+      "highlights": "1st/2nd-level podrska za veliku bazu korisnika | Key-user za Lotus Notes, Microsoft Exchange i CUT | Upravljanje mailbox-ovima/pravima, AD grupe | Exchange automatizacija kroz PowerShell | Revizije pristupa kroz vise drustava",
+      "current": false
+    },
+    "experience_6": {
+      "company": "Lidl Dienstleistung GmbH & Co. KG, Bad Wimpfen, DE",
+      "position": "Jr. Professional IT",
+      "start_date": "2021",
+      "end_date": "2025",
+      "description": "Low-code developer i tehnicki kontakt za enterprise resenja na Mendix i OutSystems platformama, uz high-code automatizaciju testova.",
+      "highlights": "Mendix 10 (StackIT/Schwarz Digits): alat za tarifnu klasifikaciju u razvoju | Mendix aplikacioni portal sa pristupom po ovlascenjima | Digitalna vizitkarta sa deljenjem mail-om, QR skenom i wallet opcijom | OutSystems 11 (Azure): plan uvodjenja, Business Engine (digitalni formulari), PRIA | Arcplan/Longview + MSSQL/SSIS: goods supply portal za socijalne ustanove i Selenium login testovi u C#",
+      "current": false
+    }
+  },
+  "skills": {
+    "title": "Tehnički Skills",
+    "stack_fullstack_title": "Fullstack Web Development (MERN)",
+    "stack_fullstack_items": "Frontend: ReactJS | Backend: NodeJS | Backend: Express | Baze podataka: MySQL | Baze podataka: MongoDB | Baze podataka: PostgreSQL",
+    "stack_lowcode_title": "Low-Code Development",
+    "stack_lowcode_items": "OutSystems 11: Service Studio | OutSystems 11: Service Center | OutSystems 11: LifeTime | Mendix 10: Studio Pro",
+    "stack_devops_title": "DevOps i verzionisanje",
+    "stack_devops_items": "Kontejnerizacija: Docker | Reverse Proxy i rutiranje: Nginx Proxy Manager | Monitoring i observability: Grafana | Verzionisanje i CI/CD: GIT | Verzionisanje i CI/CD: Azure DevOps",
+    "stack_tools_title": "Alati i tehnologije",
+    "stack_tools_items": "Testing i API: Express | Testing i API: Postman"
+  },
+  "soft_skills": {
+    "title": "Dodatne veštine",
+    "architecture": {
+      "title": "Software Engineering & Arhitektura",
+      "items": "Clean Code i SOLID principi | REST API dizajn | Slojevita i servisna arhitektura | Unit i integration testovi"
+    },
+    "agile": {
+      "title": "Agile saradnja",
+      "items": "Scrum i Kanban | User stories i reviews | Saradnja sa poslovnim oblastima | Code reviews i pair programming"
+    },
+    "devops": {
+      "title": "Operacije & DevOps osnove",
+      "items": "Deployment na Linux serverima (Ubuntu, IONOS VPS) | Docker kontejnerizacija | Reverse proxy i SSL preko Nginx Proxy Manager | Monitoring kontejnera kroz Grafana"
+    }
+  },
+  "languages": {
+    "title": "Jezički skills",
+    "german": "Nemački",
+    "english": "Engleski",
+    "serbian": "Srpski",
+    "french": "Frenski",
+    "italian": "Italijanski",
+    "level_native": "Maternji",
+    "level_fluent": "Tečno",
+    "level_negotiation": "Siguran u pregovorima",
+    "level_intermediate": "Srednji nivo",
+    "level_everyday": "Svakodnevna komunikacija",
+    "level_basic": "Osnovno"
+  },
+  "certificates": {
+    "title": "Sertifikati",
+    "description": "Odabrane kvalifikacije i potvrde sa direktnim pristupom.",
+    "view": "Pogledaj",
+    "zoom_in": "Uvećaj",
+    "zoom_out": "Smanji",
+    "reset": "Resetuj",
+    "close": "Zatvori",
+    "certificate": "Sertifikat",
+    "scrimba": {
+      "title": "Scrimba Fullstack Developer",
+      "subtitle": "Praktično validirane fullstack kompetencije"
+    },
+    "mendix": {
+      "title": "Mendix Rapid Application Developer",
+      "subtitle": "Low-Code razvoj projekata i Mendix ekspertiza"
+    },
+    "kmk": {
+      "title": "KMK sertifikat engleskog B2",
+      "subtitle": "Sertifikovane engleske jezičke kompetencije B2"
+    },
+    "stanley": {
+      "title": "Stanley Security Unison sertifikat",
+      "subtitle": "Tehnička obuka i znanje bezbednosnih procesa"
+    }
+  },
+  "legal": {
+    "imprint": {
+      "title": "Impresum",
+      "intro": "Informacije u skladu sa clanom 5 nemackog TMG-a.",
+      "provider_heading": "Pruzalac usluge",
+      "name_label": "Ime",
+      "address_label": "Adresa",
+      "contact_heading": "Kontakt",
+      "email_label": "E-mail",
+      "status_heading": "Status",
+      "status_value": "Privatno lice",
+      "vat_heading": "PDV-ID",
+      "vat_value": "PDV identifikacioni broj nije dostupan.",
+      "liability_heading": "Odgovornost za sadrzaj",
+      "liability_text": "Sadrzaj ove veb stranice je kreiran sa paznjom. Ipak, ne preuzima se garancija za tacnost, potpunost i azurnost.",
+      "copyright_heading": "Autorsko pravo",
+      "copyright_text": "Sadrzaji i dela kreirani na ovoj veb stranici podlezu autorskom pravu. Umnozavanje ili koriscenje van zakonskih granica autorskog prava zahteva prethodnu saglasnost."
+    },
+    "privacy": {
+      "title": "Obavestenje o zastiti podataka",
+      "intro": "Ova stranica objasnjava kako se obradjuju licni podaci na ovom sajtu.",
+      "controller_heading": "Rukovalac podacima",
+      "name_label": "Ime",
+      "address_label": "Adresa",
+      "email_label": "E-mail",
+      "processing_heading": "Podaci koji se obradjuju",
+      "processing_item_1": "Server log podaci pri poseti sajtu (npr. IP adresa, datum, vreme, user-agent).",
+      "processing_item_2": "Podaci iz kontakt formulara (ime, e-mail, tema, poruka) radi obrade upita.",
+      "processing_item_3": "Tehnicki anti-spam podaci (rate limiting, honeypot, Cloudflare Turnstile).",
+      "recipients_heading": "Primaoci i pruzaoci usluga",
+      "recipients_text": "Sajt je hostovan kod IONOS-a. Cloudflare Turnstile se koristi za zastitu kontakt formulara od spama.",
+      "retention_heading": "Rok cuvanja",
+      "retention_text": "Kontakt upiti se po pravilu cuvaju oko 2 nedelje i zatim brisu, osim ako postoje zakonske obaveze cuvanja.",
+      "tracking_heading": "Kolacici i pracenje",
+      "tracking_text": "Trenutno se ne koriste analiticki ni marketinski alati.",
+      "rights_heading": "Tvoja prava",
+      "rights_text": "Imas pravo na pristup, ispravku, brisanje, ogranicenje obrade i prigovor. Za zahteve je dovoljan e-mail na gore navedenu adresu."
+    }
+  }
+}
