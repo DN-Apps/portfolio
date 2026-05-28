@@ -11,6 +11,12 @@ interface SkillsSectionProps {
   groups?: SkillGroupContent[];
 }
 
+type SkillGroupView = {
+  title: string;
+  description?: string;
+  items: string[];
+};
+
 export default function SkillsSection({
   groups: cmsGroups,
 }: SkillsSectionProps) {
@@ -18,21 +24,25 @@ export default function SkillsSection({
 
   // Die Gruppen bilden die spätere Kartenstruktur direkt ab. Dadurch liegen
   // Inhalt und Layout-Logik in einem klaren, wiederverwendbaren Format vor.
-  const fallbackGroups = [
+  const fallbackGroups: SkillGroupView[] = [
     {
       title: t("stack_fullstack_title"),
+      description: undefined,
       items: splitPipeList(t("stack_fullstack_items")),
     },
     {
       title: t("stack_lowcode_title"),
+      description: undefined,
       items: splitPipeList(t("stack_lowcode_items")),
     },
     {
       title: t("stack_devops_title"),
+      description: undefined,
       items: splitPipeList(t("stack_devops_items")),
     },
     {
       title: t("stack_tools_title"),
+      description: undefined,
       items: splitPipeList(t("stack_tools_items")),
     },
   ];
