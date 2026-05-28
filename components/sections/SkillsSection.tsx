@@ -39,6 +39,7 @@ export default function SkillsSection({
 
   const stackGroups = pickCmsData(cmsGroups, fallbackGroups, (group) => ({
     title: group.category,
+    description: group.description,
     items: group.items,
   }));
 
@@ -58,6 +59,9 @@ export default function SkillsSection({
               }}
             >
               <h3>{group.title}</h3>
+              {group.description ? (
+                <p className="skill-description">{group.description}</p>
+              ) : null}
               <div className="skill-tags">
                 {group.items.map((item) => (
                   <span key={item} className="skill-tag">

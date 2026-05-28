@@ -43,6 +43,12 @@
   font-size: 1.2rem;
 }
 
+.skill-description {
+  margin: -0.5rem 0 var(--spacing-md);
+  color: var(--color-text-muted);
+  line-height: 1.6;
+}
+
 /* Tags bleiben flexibel umbrechbar, weil Tech-Stacks sprach- und inhaltsseitig
   stark variieren können. */
 .skill-tags {
@@ -119,6 +125,12 @@
     margin-bottom: 0.5rem;
   }
 
+  .skill-description {
+    margin: 0 0 0.45rem;
+    font-size: 0.84rem;
+    line-height: 1.35;
+  }
+
   .skill-tag {
     font-size: 0.76rem;
     padding: 0.25rem 0.52rem;
@@ -168,6 +180,12 @@
   .skill-category h3 {
     font-size: 1rem;
     margin-bottom: var(--spacing-sm);
+  }
+
+  .skill-description {
+    margin: 0 0 var(--spacing-sm);
+    font-size: 0.88rem;
+    line-height: 1.45;
   }
 
   .skill-tag {

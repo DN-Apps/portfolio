@@ -51,6 +51,7 @@
   overflow: hidden;
   height: 100%;
   text-align: center;
+  box-shadow: 0 8px 24px rgba(33, 100, 119, 0.08);
 }
 
 .project-card::before {
@@ -107,6 +108,10 @@
   line-height: 1.8;
 }
 
+.project-description {
+  margin-bottom: var(--spacing-sm);
+}
+
 .project-meta {
   margin-bottom: var(--spacing-sm);
 }
@@ -117,6 +122,8 @@
 
 .project-meta-block {
   margin-bottom: var(--spacing-md);
+  padding-top: 0.7rem;
+  border-top: 1px solid rgba(33, 100, 119, 0.12);
 }
 
 .project-features {
@@ -126,6 +133,23 @@
   justify-content: center;
 }
 
+.project-target-groups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+  justify-content: center;
+}
+
+.project-target-group-tag {
+  background: #005f6b;
+  color: #ffffff;
+  padding: 0.35rem 0.7rem;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  border: 1px solid #0a7a89;
+  line-height: 1.35;
+}
+
 .project-feature-tag {
   background: rgba(33, 100, 119, 0.1);
   color: var(--color-primary);
@@ -133,6 +157,7 @@
   border-radius: 999px;
   font-size: 0.8rem;
   border: 1px solid rgba(33, 100, 119, 0.3);
+  line-height: 1.35;
 }
 
 .technologies {
@@ -155,6 +180,51 @@
 .tech-tag:hover {
   background: rgba(0, 212, 255, 0.3);
   transform: scale(1.05);
+}
+
+.project-link-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.45rem;
+  margin-top: 0.2rem;
+  margin-bottom: 0.85rem;
+  min-width: 138px;
+  padding: 0.62rem 1.1rem;
+  border-radius: 999px;
+  border: 1px solid var(--color-primary);
+  background: linear-gradient(135deg, #0b6f80 0%, #005f6b 100%);
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  transition: var(--transition);
+  box-shadow: 0 8px 18px rgba(0, 95, 107, 0.28);
+}
+
+.project-link-button::after {
+  content: "↗";
+  font-size: 0.95rem;
+  line-height: 1;
+  transform: translateY(-1px);
+  transition: transform 0.2s ease;
+}
+
+.project-link-button:hover {
+  background: linear-gradient(135deg, #13839a 0%, #0b6f80 100%);
+  border-color: #13839a;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(11, 111, 128, 0.35);
+}
+
+.project-link-button:hover::after {
+  transform: translate(2px, -2px);
+}
+
+.project-link-button:focus-visible {
+  outline: 2px solid #13839a;
+  outline-offset: 2px;
+  box-shadow: 0 0 0 4px rgba(19, 131, 154, 0.22), 0 10px 20px rgba(11, 111, 128, 0.35);
 }
 
 /* Mobile behält die Statusgruppen bei, reduziert aber die Kartendichte, damit
@@ -331,9 +401,9 @@
   .projects-categories {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: var(--spacing-sm);
+    gap: var(--spacing-lg);
     align-items: start;
-    max-width: 900px;
+    max-width: 1320px;
     margin: 0 auto;
   }
 
@@ -343,33 +413,34 @@
 
   .projects-grid {
     grid-template-columns: 1fr;
-    gap: var(--spacing-sm);
+    gap: var(--spacing-md);
   }
 
   .project-card {
-    padding: var(--spacing-sm);
+    padding: var(--spacing-md);
   }
 
   .project-card h3 {
-    font-size: 0.98rem;
-    margin-bottom: 0.35rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.6rem;
   }
 
   .project-card p,
   .project-meta,
   .project-meta-block,
   .technologies {
-    font-size: 0.82rem;
-    line-height: 1.35;
+    font-size: 0.95rem;
+    line-height: 1.55;
   }
 
   .project-image {
-    height: 120px;
+    height: 200px;
   }
 
   .project-feature-tag,
-  .tech-tag {
-    font-size: 0.7rem;
-    padding: 0.2rem 0.45rem;
+  .tech-tag,
+  .project-target-group-tag {
+    font-size: 0.82rem;
+    padding: 0.34rem 0.65rem;
   }
 }

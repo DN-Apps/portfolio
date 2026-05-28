@@ -11,6 +11,59 @@ type ContactPayload = {
   message: string;
   website?: string;
   turnstileToken?: string;
+  locale?: string;
+};
+
+type MailLocale = "de" | "en" | "fr" | "sr";
+
+const EMAIL_COPY: Record<
+  MailLocale,
+  {
+    defaultSubject: string;
+    heading: string;
+    nameLabel: string;
+    emailLabel: string;
+    subjectLabel: string;
+    noSubjectLabel: string;
+    messageLabel: string;
+  }
+> = {
+  de: {
+    defaultSubject: "Neue Kontaktanfrage über Portfolio",
+    heading: "Neue Kontaktanfrage",
+    nameLabel: "Name",
+    emailLabel: "E-Mail",
+    subjectLabel: "Betreff",
+    noSubjectLabel: "(kein Betreff)",
+    messageLabel: "Nachricht",
+  },
+  en: {
+    defaultSubject: "New contact request via portfolio",
+    heading: "New contact request",
+    nameLabel: "Name",
+    emailLabel: "Email",
+    subjectLabel: "Subject",
+    noSubjectLabel: "(no subject)",
+    messageLabel: "Message",
+  },
+  fr: {
+    defaultSubject: "Nouvelle demande de contact via le portfolio",
+    heading: "Nouvelle demande de contact",
+    nameLabel: "Nom",
+    emailLabel: "E-mail",
+    subjectLabel: "Sujet",
+    noSubjectLabel: "(sans sujet)",
+    messageLabel: "Message",
+  },
+  sr: {
+    defaultSubject: "Novi kontakt upit preko portfolija",
+    heading: "Novi kontakt upit",
+    nameLabel: "Ime",
+    emailLabel: "E-mail",
+    subjectLabel: "Tema",
+    noSubjectLabel: "(bez teme)",
+    messageLabel: "Poruka",
+  },
 };
 
 const EMAIL_PATTERN = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -162,6 +215,14 @@ function validatePayload(payload: ContactPayload): string | null {
   return null;
 }
 
+function resolveMailLocale(locale?: string): MailLocale {
+  if (locale === "de" || locale === "en" || locale === "fr" || locale === "sr") {
+    return locale;
+  }
+
+  return "de";
+}
+
 export async function POST(request: NextRequest) {
   try {
     const clientIp = getClientIp(request);
@@ -178,6 +239,7 @@ export async function POST(request: NextRequest) {
       message: sanitizeText(body.message),
       website: sanitizeText(body.website),
       turnstileToken: sanitizeText(body.turnstileToken),
+      locale: sanitizeText(body.locale).toLowerCase(),
     };
 
     const validationError = validatePayload(payload);
@@ -204,26 +266,32 @@ export async function POST(request: NextRequest) {
       process.env.SMTP_FROM ?? `Portfolio Kontakt <${smtpConfig.auth.user}>`;
 
     const transporter = nodemailer.createTransport(smtpConfig);
+    const mailLocale = resolveMailLocale(payload.locale);
+    const copy = EMAIL_COPY[mailLocale];
+    const safeSubject = payload.subject || copy.noSubjectLabel;
 
     await transporter.sendMail({
       from: fromAddress,
       to: toAddress,
       replyTo: payload.email,
-      subject: payload.subject || "Neue Kontaktanfrage über Portfolio",
+      subject: payload.subject || copy.defaultSubject,
       text: [
-        `Name: ${payload.name}`,
-        `E-Mail: ${payload.email}`,
+        `${copy.nameLabel}: ${payload.name}`,
+        `${copy.emailLabel}: ${payload.email}`,
+        `${copy.subjectLabel}: ${safeSubject}`,
         "",
+        `${copy.messageLabel}:`,
         payload.message,
       ].join("\n"),
       html: `
-        <h2>Neue Kontaktanfrage</h2>
-        <p><strong>Name:</strong> ${escapeHtml(payload.name)}</p>
-        <p><strong>E-Mail:</strong> ${escapeHtml(payload.email)}</p>
-        <p><strong>Betreff:</strong> ${escapeHtml(
-          payload.subject || "(kein Betreff)",
+        <h2>${escapeHtml(copy.heading)}</h2>
+        <p><strong>${escapeHtml(copy.nameLabel)}:</strong> ${escapeHtml(payload.name)}</p>
+        <p><strong>${escapeHtml(copy.emailLabel)}:</strong> ${escapeHtml(payload.email)}</p>
+        <p><strong>${escapeHtml(copy.subjectLabel)}:</strong> ${escapeHtml(
+          safeSubject,
         )}</p>
         <hr />
+        <p><strong>${escapeHtml(copy.messageLabel)}:</strong></p>
         <p>${escapeHtml(payload.message).replace(/\n/g, "<br />")}</p>
       `,
     });
