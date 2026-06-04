@@ -218,6 +218,7 @@ export type DirectusProject = {
   description: string;
   target_group?: string;
   functionalities?: string;
+  link?: string;
   image?: string | Record<string, unknown>;
   status?: string;
   technologies?: string[] | string;
@@ -231,6 +232,7 @@ export type ProjectContent = {
   description: string;
   targetGroup?: string;
   functionalities?: string;
+  link?: string;
   image?: string;
   status: "completed" | "in-development" | "planned";
   technologies: string[];
@@ -257,6 +259,7 @@ export async function getProjects(locale?: string): Promise<ProjectContent[]> {
       description: sanitizeText(item.description),
       targetGroup: sanitizeOptionalText(item.target_group),
       functionalities: sanitizeOptionalText(item.functionalities),
+      link: sanitizeOptionalText(item.link),
       image: getDirectusAssetUrl(item.image),
       status: normalizedStatus,
       technologies: toStringArray(item.technologies),
@@ -435,6 +438,7 @@ export async function getCareerEntries(
 export type DirectusSkillGroup = {
   id: number | string;
   category: string;
+  description?: string;
   items: string | string[];
   locale?: string;
   sort?: number;
@@ -443,6 +447,7 @@ export type DirectusSkillGroup = {
 export type SkillGroupContent = {
   id: string;
   category: string;
+  description?: string;
   items: string[];
 };
 
@@ -458,6 +463,7 @@ export async function getSkillGroups(
   return result.data.map((item) => ({
     id: String(item.id),
     category: sanitizeText(item.category),
+    description: sanitizeOptionalText(item.description),
     items: toStringArray(item.items),
   }));
 }

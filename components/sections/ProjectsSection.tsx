@@ -110,11 +110,30 @@ export default function ProjectsSection({
         </div>
       ) : null}
       <h3>{project.title}</h3>
-      <p>{project.description}</p>
+      <p className="project-description">{project.description}</p>
+      {project.link ? (
+        <a
+          className="project-link-button"
+          href={project.link}
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {t("open_project")}
+        </a>
+      ) : null}
       {project.targetGroup ? (
-        <p className="project-meta">
-          <strong>{t("target_group_label")}:</strong> {project.targetGroup}
-        </p>
+        <div className="project-meta-block">
+          <p className="project-meta">
+            <strong>{t("target_group_label")}:</strong>
+          </p>
+          <div className="project-target-groups">
+            {splitPipeList(project.targetGroup).map((targetGroupItem) => (
+              <span key={targetGroupItem} className="project-target-group-tag">
+                {targetGroupItem}
+              </span>
+            ))}
+          </div>
+        </div>
       ) : null}
       {project.functionalities ? (
         <div className="project-meta-block">

@@ -2,7 +2,7 @@
 
 import { FormEvent, useEffect, useRef, useState } from "react";
 import Script from "next/script";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
 import { Link } from "@/navigation";
 import type { ContactContent } from "@/lib/directus";
 import "./ContactSection.css";
@@ -13,6 +13,7 @@ interface ContactSectionProps {
 
 export default function ContactSection({ content }: ContactSectionProps) {
   const t = useTranslations("contact");
+  const locale = useLocale();
   const turnstileSiteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY;
   const hasCaptcha = Boolean(turnstileSiteKey);
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -96,6 +97,7 @@ export default function ContactSection({ content }: ContactSectionProps) {
       message: String(formData.get("message") ?? "").trim(),
       website: String(formData.get("website") ?? "").trim(),
       turnstileToken: turnstileToken,
+      locale,
     };
 
     if (!payload.name || !payload.email || !payload.message) {
