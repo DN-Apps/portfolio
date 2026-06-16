@@ -74,6 +74,28 @@ function sanitizeOptionalText(value: unknown): string | undefined {
   return sanitized.length > 0 ? sanitized : undefined;
 }
 
+function sanitizeHttpUrl(value: unknown): string | undefined {
+  const sanitized = sanitizeOptionalText(value);
+
+  if (!sanitized) {
+    return undefined;
+  }
+
+  if (/^https?:\/\//i.test(sanitized)) {
+    return sanitized;
+  }
+
+  if (/^www\./i.test(sanitized)) {
+    return `https://${sanitized}`;
+  }
+
+  if (/^[a-z0-9.-]+\.[a-z]{2,}(?:\/.*)?$/i.test(sanitized)) {
+    return `https://${sanitized}`;
+  }
+
+  return undefined;
+}
+
 function isSafeAssetUrl(value: string): boolean {
   if (value.startsWith("/")) {
     return !value.startsWith("//");
@@ -622,6 +644,52 @@ export async function getContactContent(
     messageLabel: sanitizeOptionalText(item.message_label),
     submitLabel: sanitizeOptionalText(item.submit),
   };
+}
+
+export type DirectusSocialLink = {
+  id: number | string;
+  label?: string;
+  name?: string;
+  platform?: string;
+  url?: string;
+  locale?: string;
+  sort?: number;
+};
+
+export type SocialLinkContent = {
+  id: string;
+  label: string;
+  url: string;
+};
+
+export async function getFooterSocialLinks(
+  _locale?: string,
+): Promise<SocialLinkContent[]> {
+  // Social-Links sind sprachunabhängig und werden daher ohne Locale-Filter geladen.
+  const result = await fetchDirectusCollection<DirectusSocialLink>(
+    "social_links",
+    { sort: "sort,id" },
+  );
+
+  return result.data.flatMap((item) => {
+    const label =
+      sanitizeOptionalText(item.label) ||
+      sanitizeOptionalText(item.name) ||
+      sanitizeOptionalText(item.platform);
+    const url = sanitizeHttpUrl(item.url);
+
+    if (!label || !url) {
+      return [];
+    }
+
+    return [
+      {
+        id: String(item.id),
+        label,
+        url,
+      },
+    ];
+  });
 }
 
 export async function safeCmsFetch<T>(
