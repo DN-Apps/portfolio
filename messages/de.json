@@ -106,6 +106,23 @@
       "functionalities": "Offlinefaehigkeiten | GPT-Integrationen | Systemkomponenten integrieren | Datenanalysen | etc."
     }
   },
+  "github": {
+    "title": "GitHub Aktivität",
+    "subtitle": "Beitragsübersicht und aktuelle Entwicklungsaktivitäten.",
+    "contributions_last_year": "Contributions im letzten Jahr",
+    "contributions_public_preview": "Öffentliche Contributions-Vorschau",
+    "view_profile": "GitHub Profil öffnen",
+    "heatmap_label": "GitHub Contributions Heatmap",
+    "zoom_hint": "Tippen/Klicken zum Vergrößern",
+    "less": "Weniger",
+    "more": "Mehr",
+    "activity_title": "Contribution activity",
+    "no_data": "Derzeit keine öffentlichen Aktivitäten verfügbar.",
+    "commits_created": "Commits erstellt",
+    "repositories_created": "Repository erstellt",
+    "pull_requests_opened": "Pull Requests geöffnet",
+    "pull_requests_merged": "Pull Requests gemerged"
+  },
   "personal": {
     "title": "Privates über mich",
     "intro": "Abseits der Programmierung",

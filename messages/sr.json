@@ -106,6 +106,23 @@
       "functionalities": "Offline mogucnosti | GPT integracije | Integracija sistemskih komponenti | Analiza podataka | itd."
     }
   },
+  "github": {
+    "title": "GitHub aktivnost",
+    "subtitle": "Pregled doprinosa i nedavne razvojne aktivnosti.",
+    "contributions_last_year": "doprinosa u poslednjih godinu dana",
+    "contributions_public_preview": "Javni pregled doprinosa",
+    "view_profile": "Otvori GitHub profil",
+    "heatmap_label": "GitHub heatmap doprinosa",
+    "zoom_hint": "Tapni/klikni za uvećanje",
+    "less": "Manje",
+    "more": "Više",
+    "activity_title": "Contribution activity",
+    "no_data": "Trenutno nema dostupnih javnih aktivnosti.",
+    "commits_created": "commit-a kreirano",
+    "repositories_created": "repozitorijuma kreirano",
+    "pull_requests_opened": "pull request-ova otvoreno",
+    "pull_requests_merged": "pull request-ova spojeno"
+  },
   "personal": {
     "title": "Lično o meni",
     "intro": "Van koda",
