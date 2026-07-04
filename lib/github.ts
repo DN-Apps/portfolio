@@ -78,6 +78,10 @@ type GitHubCommit = {
   };
 };
 
+type GitHubContributionsCollection = NonNullable<
+  NonNullable<NonNullable<GitHubGraphQlResponse["data"]>["user"]>["contributionsCollection"]
+>;
+
 export type ContributionDay = {
   date: string;
   count: number;
@@ -205,9 +209,7 @@ function finalizeMonthlyActivity(
 }
 
 function buildMonthlyActivityFromContributions(
-  contributions: GitHubGraphQlResponse["data"] extends { user?: { contributionsCollection?: infer T } }
-    ? T
-    : never,
+  contributions: GitHubContributionsCollection | undefined,
 ): MonthlyActivity[] {
   if (!contributions) {
     return [];
