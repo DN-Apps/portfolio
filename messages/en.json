@@ -70,6 +70,13 @@
     "target_group_label": "Target group",
     "functionalities_label": "Features",
     "open_project": "View project",
+    "filters_title": "Project filters",
+    "filter_status_label": "Category",
+    "filter_status_all": "All categories",
+    "filter_link_label": "Project link",
+    "filter_link_all": "All projects",
+    "filter_link_with": "Only with link",
+    "no_results": "No projects match the selected filters.",
     "project_1": {
       "title": "Monteurzimmer Nedic",
       "description": "A project for providing worker accommodations with modern equipment and an easy booking option.",

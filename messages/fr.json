@@ -70,6 +70,13 @@
     "target_group_label": "Public cible",
     "functionalities_label": "Fonctionnalités",
     "open_project": "Voir le projet",
+    "filters_title": "Filtres de projets",
+    "filter_status_label": "Catégorie",
+    "filter_status_all": "Toutes les catégories",
+    "filter_link_label": "Lien du projet",
+    "filter_link_all": "Tous les projets",
+    "filter_link_with": "Seulement avec lien",
+    "no_results": "Aucun projet ne correspond aux filtres sélectionnés.",
     "project_1": {
       "title": "Monteurzimmer Nedic",
       "description": "Un projet de mise à disposition de logements pour ouvriers avec un équipement moderne et une option de réservation simple.",

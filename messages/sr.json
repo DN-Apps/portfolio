@@ -70,6 +70,13 @@
     "target_group_label": "Ciljna grupa",
     "functionalities_label": "Funkcionalnosti",
     "open_project": "Otvori projekat",
+    "filters_title": "Filteri projekata",
+    "filter_status_label": "Kategorija",
+    "filter_status_all": "Sve kategorije",
+    "filter_link_label": "Link projekta",
+    "filter_link_all": "Svi projekti",
+    "filter_link_with": "Samo sa linkom",
+    "no_results": "Nijedan projekat ne odgovara izabranim filterima.",
     "project_1": {
       "title": "Monteurzimmer Nedic",
       "description": "Projekat za obezbeđivanje smeštaja za radnike sa modernom opremom i jednostavnom opcijom rezervacije.",

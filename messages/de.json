@@ -70,6 +70,13 @@
     "target_group_label": "Zielgruppe",
     "functionalities_label": "Funktionalitäten",
     "open_project": "Zum Projekt",
+    "filters_title": "Projektfilter",
+    "filter_status_label": "Kategorie",
+    "filter_status_all": "Alle Kategorien",
+    "filter_link_label": "Projektlink",
+    "filter_link_all": "Alle Projekte",
+    "filter_link_with": "Nur mit Link",
+    "no_results": "Keine Projekte für die gewählten Filter gefunden.",
     "project_1": {
       "title": "Monteurzimmer Nedic",
       "description": "Ein Projekt zur Bereitstellung von Monteurunterkünften mit moderner Ausstattung und einfacher Buchungsoption.",
