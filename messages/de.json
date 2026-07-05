@@ -70,6 +70,13 @@
     "target_group_label": "Zielgruppe",
     "functionalities_label": "Funktionalitäten",
     "open_project": "Zum Projekt",
+    "filters_title": "Projektfilter",
+    "filter_status_label": "Kategorie",
+    "filter_status_all": "Alle Kategorien",
+    "filter_link_label": "Projektlink",
+    "filter_link_all": "Alle Projekte",
+    "filter_link_with": "Nur mit Link",
+    "no_results": "Keine Projekte für die gewählten Filter gefunden.",
     "project_1": {
       "title": "Monteurzimmer Nedic",
       "description": "Ein Projekt zur Bereitstellung von Monteurunterkünften mit moderner Ausstattung und einfacher Buchungsoption.",
@@ -98,6 +105,23 @@
       "target_group": "Kuenftige Interessenten und Kunden",
       "functionalities": "Offlinefaehigkeiten | GPT-Integrationen | Systemkomponenten integrieren | Datenanalysen | etc."
     }
+  },
+  "github": {
+    "title": "GitHub Aktivität",
+    "subtitle": "Beitragsübersicht und aktuelle Entwicklungsaktivitäten.",
+    "contributions_last_year": "Contributions im letzten Jahr",
+    "contributions_public_preview": "Öffentliche Contributions-Vorschau",
+    "view_profile": "GitHub Profil öffnen",
+    "heatmap_label": "GitHub Contributions Heatmap",
+    "zoom_hint": "Tippen/Klicken zum Vergrößern",
+    "less": "Weniger",
+    "more": "Mehr",
+    "activity_title": "Contribution activity",
+    "no_data": "Derzeit keine öffentlichen Aktivitäten verfügbar.",
+    "commits_created": "Commits erstellt",
+    "repositories_created": "Repository erstellt",
+    "pull_requests_opened": "Pull Requests geöffnet",
+    "pull_requests_merged": "Pull Requests gemerged"
   },
   "personal": {
     "title": "Privates über mich",

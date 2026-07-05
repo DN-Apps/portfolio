@@ -1,6 +1,7 @@
 import { unstable_setRequestLocale } from "next-intl/server";
 import Header from "@/components/Header";
 import HeroSection from "@/components/sections/HeroSection";
+import GitHubActivitySection from "@/components/sections/GitHubActivitySection";
 import SoftSkillsSection from "@/components/sections/SoftSkillsSection";
 import CertificateSection from "@/components/sections/CertificateSection";
 import ContactSection from "@/components/sections/ContactSection";
@@ -36,6 +37,7 @@ export default async function AboutPage({ params: { locale } }: PageProps) {
       <Header />
       <main id="main-content">
         <HeroSection content={heroContent} />
+        <GitHubActivitySection locale={locale} />
         <SoftSkillsSection groups={softSkillGroups} />
         <CertificateSection certificates={certificates} />
         <ContactSection content={contactContent} />

@@ -70,6 +70,13 @@
     "target_group_label": "Ciljna grupa",
     "functionalities_label": "Funkcionalnosti",
     "open_project": "Otvori projekat",
+    "filters_title": "Filteri projekata",
+    "filter_status_label": "Kategorija",
+    "filter_status_all": "Sve kategorije",
+    "filter_link_label": "Link projekta",
+    "filter_link_all": "Svi projekti",
+    "filter_link_with": "Samo sa linkom",
+    "no_results": "Nijedan projekat ne odgovara izabranim filterima.",
     "project_1": {
       "title": "Monteurzimmer Nedic",
       "description": "Projekat za obezbeđivanje smeštaja za radnike sa modernom opremom i jednostavnom opcijom rezervacije.",
@@ -98,6 +105,23 @@
       "target_group": "Buduci zainteresovani i klijenti",
       "functionalities": "Offline mogucnosti | GPT integracije | Integracija sistemskih komponenti | Analiza podataka | itd."
     }
+  },
+  "github": {
+    "title": "GitHub aktivnost",
+    "subtitle": "Pregled doprinosa i nedavne razvojne aktivnosti.",
+    "contributions_last_year": "doprinosa u poslednjih godinu dana",
+    "contributions_public_preview": "Javni pregled doprinosa",
+    "view_profile": "Otvori GitHub profil",
+    "heatmap_label": "GitHub heatmap doprinosa",
+    "zoom_hint": "Tapni/klikni za uvećanje",
+    "less": "Manje",
+    "more": "Više",
+    "activity_title": "Contribution activity",
+    "no_data": "Trenutno nema dostupnih javnih aktivnosti.",
+    "commits_created": "commit-a kreirano",
+    "repositories_created": "repozitorijuma kreirano",
+    "pull_requests_opened": "pull request-ova otvoreno",
+    "pull_requests_merged": "pull request-ova spojeno"
   },
   "personal": {
     "title": "Lično o meni",

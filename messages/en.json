@@ -70,6 +70,13 @@
     "target_group_label": "Target group",
     "functionalities_label": "Features",
     "open_project": "View project",
+    "filters_title": "Project filters",
+    "filter_status_label": "Category",
+    "filter_status_all": "All categories",
+    "filter_link_label": "Project link",
+    "filter_link_all": "All projects",
+    "filter_link_with": "Only with link",
+    "no_results": "No projects match the selected filters.",
     "project_1": {
       "title": "Monteurzimmer Nedic",
       "description": "A project for providing worker accommodations with modern equipment and an easy booking option.",
@@ -98,6 +105,23 @@
       "target_group": "Future prospects and customers",
       "functionalities": "Offline capabilities | GPT integrations | Integrate system components | Data analytics | etc."
     }
+  },
+  "github": {
+    "title": "GitHub Activity",
+    "subtitle": "Contribution overview and recent development activity.",
+    "contributions_last_year": "contributions in the last year",
+    "contributions_public_preview": "Public contributions preview",
+    "view_profile": "Open GitHub profile",
+    "heatmap_label": "GitHub contributions heatmap",
+    "zoom_hint": "Tap/click to enlarge",
+    "less": "Less",
+    "more": "More",
+    "activity_title": "Contribution activity",
+    "no_data": "No public activity available right now.",
+    "commits_created": "commits created",
+    "repositories_created": "repositories created",
+    "pull_requests_opened": "pull requests opened",
+    "pull_requests_merged": "pull requests merged"
   },
   "personal": {
     "title": "Personal",

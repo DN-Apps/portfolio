@@ -1,0 +1,337 @@
+/* GitHub-Bereich ist mobile-first und orientiert sich visuell an der
+   bestehenden Kartenlogik der Seite. */
+.github-section {
+  padding: var(--spacing-xl) var(--spacing-lg);
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-light) 0%,
+    var(--color-bg) 100%
+  );
+  border-bottom: 1px solid var(--color-border);
+}
+
+.github-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .github-section h2 {
+    text-align: center;
+  }
+}
+
+.github-subtitle {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+}
+
+.github-heatmap-wrap {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: var(--spacing-md);
+  box-shadow: 0 10px 24px rgba(33, 100, 119, 0.08);
+  margin-bottom: var(--spacing-lg);
+}
+
+.github-heatmap-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+  margin-bottom: var(--spacing-sm);
+}
+
+.github-heatmap-header p {
+  margin: 0;
+  color: var(--color-primary);
+  font-weight: 700;
+}
+
+.github-heatmap-header a {
+  width: fit-content;
+  font-size: 0.92rem;
+  font-weight: 600;
+}
+
+.github-heatmap-grid {
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-rows: repeat(7, 1fr);
+  gap: 0.2rem;
+  overflow-x: auto;
+  padding-bottom: 0.2rem;
+}
+
+.github-heatmap-trigger {
+  display: block;
+  width: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background: transparent;
+  box-shadow: none;
+  cursor: zoom-in;
+  transform: none;
+  touch-action: manipulation;
+}
+
+.github-heatmap-trigger .github-heatmap-grid,
+.github-heatmap-trigger .github-heatmap-image {
+  pointer-events: none;
+}
+
+.github-heatmap-trigger:hover,
+.github-heatmap-trigger:focus-visible {
+  box-shadow: none;
+  transform: none;
+}
+
+.github-heatmap-trigger:focus-visible {
+  outline: 2px solid rgba(19, 131, 154, 0.45);
+  outline-offset: 4px;
+  border-radius: 8px;
+}
+
+.github-day {
+  width: 0.7rem;
+  height: 0.7rem;
+  border-radius: 2px;
+  display: inline-block;
+  border: 1px solid rgba(33, 100, 119, 0.1);
+}
+
+.level-0 {
+  background: #ebedf0;
+}
+
+.level-1 {
+  background: #9be9a8;
+}
+
+.level-2 {
+  background: #40c463;
+}
+
+.level-3 {
+  background: #30a14e;
+}
+
+.level-4 {
+  background: #216e39;
+}
+
+.github-heatmap-image {
+  width: 100%;
+  max-width: 840px;
+  border-radius: 8px;
+  border: 1px solid var(--color-border);
+  display: block;
+}
+
+.github-legend {
+  margin-top: var(--spacing-sm);
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.35rem;
+  color: var(--color-text-muted);
+  font-size: 0.82rem;
+}
+
+.github-zoom-hint {
+  margin: 0.45rem 0 0;
+  font-size: 0.82rem;
+  color: var(--color-text-muted);
+  text-align: right;
+}
+
+.github-heatmap-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 31, 0.52);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  z-index: 1200;
+  animation: githubBackdropFadeIn 0.2s ease-out;
+}
+
+.github-heatmap-modal {
+  position: relative;
+  width: min(1120px, 100%);
+  max-height: 90vh;
+  overflow: auto;
+  border-radius: 14px;
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  box-shadow: 0 24px 48px rgba(15, 23, 31, 0.35);
+  padding: var(--spacing-md);
+  transform-origin: center center;
+  animation: githubModalZoomIn 0.22s ease-out;
+}
+
+.github-heatmap-modal-content {
+  overflow-x: auto;
+  padding-top: 1.9rem;
+  padding-bottom: 0.15rem;
+}
+
+.github-heatmap-modal-content .github-heatmap-grid {
+  width: max-content;
+}
+
+.github-heatmap-modal-close {
+  position: absolute;
+  top: 0.6rem;
+  right: 0.6rem;
+  width: 2rem;
+  height: 2rem;
+  border-radius: 999px;
+  border: 1px solid rgba(33, 100, 119, 0.35);
+  background: #ffffff;
+  color: var(--color-primary);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.95rem;
+  cursor: pointer;
+  box-shadow: none;
+  transform: none;
+  padding: 0;
+}
+
+.github-heatmap-modal-close:hover {
+  background: rgba(33, 100, 119, 0.08);
+  box-shadow: none;
+  transform: none;
+}
+
+.github-day-large {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.github-heatmap-image-large {
+  max-width: none;
+  width: auto;
+  min-width: 720px;
+}
+
+@keyframes githubBackdropFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes githubModalZoomIn {
+  from {
+    opacity: 0;
+    transform: scale(0.94);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .github-heatmap-modal-backdrop,
+  .github-heatmap-modal {
+    animation: none;
+  }
+}
+
+.github-activity-wrap {
+  background: var(--color-bg-light);
+  border: 1px solid var(--color-border);
+  border-radius: 14px;
+  padding: var(--spacing-md);
+  box-shadow: 0 10px 24px rgba(33, 100, 119, 0.08);
+}
+
+.github-activity-wrap h3 {
+  margin-bottom: var(--spacing-md);
+  font-size: 1.3rem;
+}
+
+.github-no-activity {
+  margin: 0;
+  color: var(--color-text-muted);
+}
+
+.github-month-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-md);
+}
+
+.github-month-card {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: var(--spacing-sm);
+  background: linear-gradient(135deg, #ffffff 0%, #f8fbfd 100%);
+}
+
+.github-month-card h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.75rem;
+  text-transform: capitalize;
+}
+
+.github-activity-block {
+  margin-top: 0.75rem;
+}
+
+.github-activity-headline {
+  margin: 0 0 0.35rem 0;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.github-activity-block ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0.35rem;
+}
+
+.github-activity-block li {
+  display: flex;
+  justify-content: space-between;
+  gap: 0.5rem;
+  color: var(--color-text-muted);
+  font-size: 0.92rem;
+}
+
+.github-activity-block strong {
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  .github-month-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .github-day {
+    width: 0.75rem;
+    height: 0.75rem;
+  }
+}
+
+@media (max-width: 991px) {
+  .github-section {
+    padding: var(--spacing-lg) var(--spacing-md);
+  }
+}
+
+@media (min-width: 992px) {
+  .github-month-list {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

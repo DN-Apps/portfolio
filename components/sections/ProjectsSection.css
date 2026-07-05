@@ -15,6 +15,128 @@
   margin-bottom: var(--spacing-xl);
 }
 
+.projects-filters {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-sm);
+  margin-bottom: var(--spacing-lg);
+}
+
+.project-filter-field {
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+
+.project-filter-options {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.45rem;
+  min-height: 2.4rem;
+}
+
+.project-filter-pill {
+  border: 1px solid #0b6f80;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #0b6f80 0%, #005f6b 100%);
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.85rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.45rem 0.8rem;
+  cursor: pointer;
+  transition: var(--transition);
+  box-shadow: 0 6px 14px rgba(0, 95, 107, 0.24);
+}
+
+.project-filter-pill:hover {
+  background: linear-gradient(135deg, #13839a 0%, #0b6f80 100%);
+  border-color: #13839a;
+  box-shadow: 0 8px 16px rgba(11, 111, 128, 0.3);
+}
+
+.project-filter-pill:focus-visible {
+  outline: 2px solid rgba(19, 131, 154, 0.45);
+  outline-offset: 2px;
+}
+
+.project-filter-pill.is-disabled,
+.project-filter-pill:disabled {
+  border-color: rgba(79, 100, 106, 0.45);
+  background: rgba(79, 100, 106, 0.12);
+  color: rgba(79, 100, 106, 0.95);
+  cursor: not-allowed;
+}
+
+.project-filter-label {
+  margin: 0;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.project-filter-active-area {
+  min-height: 3.2rem;
+  border: 1px dashed rgba(33, 100, 119, 0.35);
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.25);
+  padding: 0.45rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.project-filter-empty-space {
+  width: 100%;
+  min-height: 2.1rem;
+}
+
+.project-filter-active-pill {
+  border: 1px solid #0a7a89;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #13839a 0%, #0b6f80 100%);
+  color: #ffffff;
+  font: inherit;
+  font-size: 0.86rem;
+  font-weight: 600;
+  line-height: 1.2;
+  padding: 0.48rem 0.8rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.project-filter-active-pill:hover {
+  filter: brightness(1.06);
+}
+
+.project-filter-active-pill:focus-visible {
+  outline: 2px solid rgba(19, 131, 154, 0.5);
+  outline-offset: 2px;
+}
+
+.project-filter-remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.2rem;
+  height: 1.2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.18);
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.projects-empty {
+  margin-top: var(--spacing-md);
+  text-align: center;
+  color: var(--color-text-muted);
+}
+
 .projects-category {
   margin-bottom: var(--spacing-xl);
 }
@@ -30,8 +152,18 @@
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  grid-template-columns: 1fr;
   gap: var(--spacing-lg);
+}
+
+@media (min-width: 768px) {
+  .projects-filters {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .projects-grid {
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  }
 }
 
 /* Die Karte kombiniert Bild, Metadaten und Tags in einem Container, damit ein
@@ -242,6 +374,12 @@
     margin: 0 auto;
   }
 
+  .projects-filters {
+    max-width: 420px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
   .projects-grid {
     grid-template-columns: 1fr;
     gap: var(--spacing-md);
@@ -405,6 +543,12 @@
     align-items: start;
     max-width: 1320px;
     margin: 0 auto;
+  }
+
+  .projects-filters {
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
   .projects-category {

@@ -256,7 +256,7 @@ export type ProjectContent = {
   functionalities?: string;
   link?: string;
   image?: string;
-  status: "completed" | "in-development" | "planned";
+  status: string;
   technologies: string[];
 };
 
@@ -267,26 +267,17 @@ export async function getProjects(locale?: string): Promise<ProjectContent[]> {
     queryWithLocale(locale, { sort: "sort,id" }),
   );
 
-  return result.data.map((item) => {
-    const normalizedStatus =
-      item.status === "completed" ||
-      item.status === "in-development" ||
-      item.status === "planned"
-        ? item.status
-        : "planned";
-
-    return {
-      id: String(item.id),
-      title: sanitizeText(item.title),
-      description: sanitizeText(item.description),
-      targetGroup: sanitizeOptionalText(item.target_group),
-      functionalities: sanitizeOptionalText(item.functionalities),
-      link: sanitizeOptionalText(item.link),
-      image: getDirectusAssetUrl(item.image),
-      status: normalizedStatus,
-      technologies: toStringArray(item.technologies),
-    };
-  });
+  return result.data.map((item) => ({
+    id: String(item.id),
+    title: sanitizeText(item.title),
+    description: sanitizeText(item.description),
+    targetGroup: sanitizeOptionalText(item.target_group),
+    functionalities: sanitizeOptionalText(item.functionalities),
+    link: sanitizeOptionalText(item.link),
+    image: getDirectusAssetUrl(item.image),
+    status: sanitizeOptionalText(item.status) ?? "planned",
+    technologies: toStringArray(item.technologies),
+  }));
 }
 
 export type DirectusPersonalCard = {
